@@ -1,4 +1,4 @@
-package com.cyong.cyongblogcontroller;
+package com.cyong;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
