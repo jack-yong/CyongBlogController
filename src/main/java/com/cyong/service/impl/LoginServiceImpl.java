@@ -1,4 +1,6 @@
 package com.cyong.service.impl;
 
-public class LoginServiceImpl {
+import com.cyong.service.LoginService;
+
+public class LoginServiceImpl implements LoginService {
 }

@@ -1,13 +1,54 @@
 spring:
+  #数据库相关信息设置
   datasource:
-    username: root
-    url: jdbc:mysql://localhost:3306/cyongblog?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+
     driver-class-name: com.mysql.cj.jdbc.Driver
-    password: 123456
-  thymeleaf:
-    cache: false
+    type: com.alibaba.druid.pool.DruidDataSource
+    #Druid连接池的配置信息
+    druid:
+      url: jdbc:mysql://localhost:3306/cyongblog?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+      username: root
+      password: 123456
+      initial-size: 5
+      min-idle: 5
+      max-active: 20
+      # 配置获取连接等待超时的时间
+      max-wait: 60000
+      # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+      time-between-eviction-runs-millis: 60000
+      # 配置一个连接在池中最小生存的时间，单位是毫秒
+      min-evictable-idle-time-millis: 300000
+      # 检测连接是否有效的sql
+      test-while-idle: true
+      validation-query: SELECT 'x'
+      test-on-borrow: false
+      test-on-return: false
+      pool-prepared-statements: false
+      max-pool-prepared-statement-per-connection-size: -1
+      filters: stat,wall,spring-boot-starter-log4j2
+
+
+  #编码格式设置
+  messages:
+    encoding: UTF-8
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
+  #redis设置
+  redis:
+    database: 0
+    port: 6379
+    timeout: 500ms
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+        max-wait: -1ms
+        min-idle: 0
+  #文件上传限制
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
 
 #mybatis整合
 mybatis:
@@ -16,9 +57,24 @@ mybatis:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
+#服务的相关配置
 server:
   servlet:
     session:
       tracking-modes: cookie
       cookie:
         http-only: true
+  tomcat:
+    uri-encoding: UTF-8
+
+#pagehelper配置
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count
+
+#log config
+logging:
+  config: classpath:log4j2.xml
+
