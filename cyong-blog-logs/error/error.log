@@ -578,3 +578,4 @@ Action:
 Update your application's configuration
 
 2021-11-20 17:18:30,678 [main] ERROR [com.alibaba.druid.filter.FilterManager] - load filter error, filter not found : spring-boot-starter-log4j2
+2021-11-21 18:48:48,017 [main] ERROR [com.alibaba.druid.filter.FilterManager] - load filter error, filter not found : spring-boot-starter-log4j2

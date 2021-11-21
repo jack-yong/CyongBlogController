@@ -29,6 +29,15 @@
             </exclusions>
         </dependency>
 
+
+        <!-- spring-boot-starter-security -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+            <version>2.5.5</version>
+        </dependency>
+
+
         <!--引入mybatis所需的依赖-->
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
