@@ -10,7 +10,6 @@ import javax.sql.DataSource;
 
 @SpringBootApplication
 public class CyongBlogControllerApplication {
-
     @Bean
     @ConfigurationProperties(prefix = "spring.datasource.druid")
     public DataSource dateSource() {
