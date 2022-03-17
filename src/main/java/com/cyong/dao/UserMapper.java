@@ -63,4 +63,20 @@ public interface UserMapper {
      */
     User findUserByPhone(@Param("phone") String phone);
 
+    /**
+     * 通过电话号码查询是该用户
+     * @param id
+     * @return String
+     */
+    String findUsernameById(int id);
+
+    /**
+     * 通过用户名查找用户信息
+     * @param username 手机号
+     * @return 用户名
+     */
+    User findUserByUsername(String username);
+
+
+
 }

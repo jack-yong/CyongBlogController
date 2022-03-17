@@ -1,13 +1,16 @@
 package com.cyong;
 
 
+import com.cyong.model.User;
 import com.cyong.service.UserService;
+import com.cyong.utils.DataMap;
 import org.junit.FixMethodOrder;
 import org.junit.jupiter.api.Test;
 import org.junit.runners.MethodSorters;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import javax.annotation.Resource;
 import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -27,7 +30,7 @@ public class UserTest {
     @Autowired
     DataSource dataSource;
 
-    @Autowired
+    @Resource
     UserService userService;
 
     @Test
@@ -41,5 +44,11 @@ public class UserTest {
     @Test
     public void test1(){
             userService.findUserByPhone("15039774090");
+    }
+
+    @Test
+    public void test2(){
+        User caicai = userService.findUserByUsername("caicai");
+        System.out.println(caicai);
     }
 }

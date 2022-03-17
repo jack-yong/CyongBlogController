@@ -66,6 +66,7 @@ server:
         http-only: true
   tomcat:
     uri-encoding: UTF-8
+  port: 8080
 
 #pagehelper配置
 pagehelper:
