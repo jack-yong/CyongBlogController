@@ -37,7 +37,7 @@ public class LoginController {
         accessTokenDTO.setRedirect_uri("http://localhost:8080/callback");
         accessTokenDTO.setState(state);
         accessTokenDTO.setClient_id("35ac9daad4c0a9105edc");
-        accessTokenDTO.setClient_secret("b707e864e9466ad116fcd5cbfceed751598dc8a2");
+        accessTokenDTO.setClient_secret("");
         String accessToken = githubProvider.getAccessToken(accessTokenDTO);
         GithubUser user = githubProvider.getUser(accessToken);
         return user.toString();
