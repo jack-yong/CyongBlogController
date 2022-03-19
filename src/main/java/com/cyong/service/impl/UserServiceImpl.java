@@ -1,6 +1,7 @@
 package com.cyong.service.impl;
 
 import com.cyong.constant.CodeType;
+import com.cyong.constant.StringConst;
 import com.cyong.dao.UserMapper;
 import com.cyong.model.User;
 import com.cyong.service.UserService;
@@ -33,8 +34,19 @@ public class UserServiceImpl  implements UserService {
     }
 
     @Override
-    public DataMap insert(User user) {
-        return null;
+    public DataMap insert(String username, String password, String email, String phone) {
+        //随机生成图片呢的地址
+        String imgDefaultUrl = "https://joeschmoe.io/api/v1/random";
+        String trimBlankUsername = username.trim().replaceAll(" ", StringConst.BLANK);
+        if(trimBlankUsername.length() > StringConst.USERNAME_MAX_LENGTH || StringConst.BLANK.equals(trimBlankUsername)){
+            return DataMap.fail(CodeType.USERNAME_FORMAT_ERROR);
+        }
+        if(usernameIsExist(trimBlankUsername)){
+            return DataMap.fail(CodeType.USER_NAME_EXIST);
+        }
+        User user =new User(trimBlankUsername,password, email,phone,imgDefaultUrl,"user");
+        int insert = userMapper.insert(user);
+        return DataMap.success();
     }
 
     @Override
@@ -65,7 +77,8 @@ public class UserServiceImpl  implements UserService {
 
     @Override
     public boolean usernameIsExist(String username) {
-        return false;
+        User userByUsername = userMapper.findUserByUsername(username);
+        return userByUsername!=null;
     }
 
     @Override

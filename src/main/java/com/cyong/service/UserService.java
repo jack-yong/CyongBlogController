@@ -30,7 +30,7 @@ public interface UserService {
      * 注册用户
      */
     @Transactional
-    DataMap insert(User user);
+    DataMap insert(String username,String password,String email,String phone);
 
     /**
      * 通过手机号查找用户id
