@@ -88,13 +88,14 @@ public class User {
     public User() {
     }
 
-    public User(String userNickname, String userPassword,  String userEmail, String userPhone, String userAvatarimgurl, String userRole) {
+    public User(String userNickname, String userPassword,  String userEmail, String userPhone, String userAvatarimgurl, String userRole,Date Recentlylanded) {
         this.userPhone = userPhone;
         this.userNickname = userNickname;
         this.userPassword = userPassword;
         this.userEmail = userEmail;
         this.userAvatarimgurl = userAvatarimgurl;
         this.userRole = userRole;
+        this.userRecentlylanded = Recentlylanded;
     }
 
     /**

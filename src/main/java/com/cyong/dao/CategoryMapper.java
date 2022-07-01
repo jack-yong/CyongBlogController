@@ -4,6 +4,8 @@ import com.cyong.model.Category;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Mapper
 @Repository
 public interface CategoryMapper {
@@ -54,4 +56,11 @@ public interface CategoryMapper {
      * @mbggenerated Mon Oct 25 11:12:50 CST 2021
      */
     int updateByPrimaryKey(Category record);
+
+    Category searchByCateName(String cateName);
+
+    List<Category> searchAllCategory();
+
+    List<Category> cateVagueSearch(String cateName);
+
 }

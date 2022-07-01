@@ -119,4 +119,11 @@
       tag_create_time = #{tagCreateTime,jdbcType=TIMESTAMP}
     where tag_id = #{tagId,jdbcType=INTEGER}
   </update>
+
+  <select id="vagueSearchByTagName" resultMap="BaseResultMap" parameterType="java.lang.String">
+    select
+    <include refid="Base_Column_List" />
+    from tb_tag
+    where tag_name like concat('%',#{tagName,jdbcType=VARCHAR},'%')
+  </select>
 </mapper>

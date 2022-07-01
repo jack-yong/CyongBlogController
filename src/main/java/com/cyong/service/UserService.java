@@ -112,5 +112,7 @@ public interface UserService {
 
     DataMap userLoginVerify(String username,String password);
 
+    DataMap userVagueSearch(String userName,int pageSize,int pageNum);
+
 
 }

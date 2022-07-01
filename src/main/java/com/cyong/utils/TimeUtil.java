@@ -1,5 +1,7 @@
 package com.cyong.utils;
 
+import org.springframework.stereotype.Component;
+
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -15,6 +17,7 @@ import java.util.Date;
  * @CreateTime: 2021-11-21 18:45
  * @Description: 时间格式处理工具
  */
+@Component
 public class TimeUtil {
     /**
      * 格式化日期
@@ -56,9 +59,9 @@ public class TimeUtil {
      * @param date 日期 2018-06-21
      * @return
      */
-    public LocalDate getParseDateForThree(String date){
-        DateTimeFormatter format = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        return LocalDate.parse(date, format);
+    public String getParseDateForThree(Date date){
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+        return formatter.format(date);
     }
 
     /**
@@ -66,9 +69,9 @@ public class TimeUtil {
      * @param date 日期 2018-06-21 12:01:25
      * @return
      */
-    public LocalDate getParseDateForSix(String date){
-        DateTimeFormatter format = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-        return LocalDate.parse(date, format);
+    public String getParseDateForSix(Date date){
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        return formatter.format(date);
     }
 
     /**

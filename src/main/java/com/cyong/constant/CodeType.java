@@ -24,12 +24,15 @@ public enum CodeType {
 
     FIND_TAGS_CLOUD(301, "获得所有标签成功"),
     FIND_ARTICLE_BY_TAG(302, "通过标签获得文章成功"),
+    FIND_TAGS_EXIST(303, "标签已经存在"),
+    TAGS_HAS_ARTICLE(304, "标签下存在文章"),
 
     ADD_CATEGORY_SUCCESS(401, "添加分类成功"),
     CATEGORY_EXIST(402, "分类已存在"),
     DELETE_CATEGORY_SUCCESS(403, "删除分类成功"),
     CATEGORY_NOT_EXIST(404, "分类不存在"),
     CATEGORY_HAS_ARTICLE(405, "分类下存在文章，删除失败"),
+    UN_EXPECTED_ERROR(406, "异常错误"),
 
     USERNAME_TOO_LANG(501, "用户名太长"),
     USERNAME_BLANK(502, "用户名为空"),

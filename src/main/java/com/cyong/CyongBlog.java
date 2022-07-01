@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Bean;
 import javax.sql.DataSource;
 
 @SpringBootApplication
-public class CyongBlogControllerApplication {
+public class CyongBlog {
     @Bean
     @ConfigurationProperties(prefix = "spring.datasource.druid")
     public DataSource dateSource() {
@@ -18,7 +18,7 @@ public class CyongBlogControllerApplication {
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(CyongBlogControllerApplication.class, args);
+        SpringApplication.run(CyongBlog.class, args);
     }
 
 }

@@ -6,7 +6,7 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     #Druid连接池的配置信息
     druid:
-      url: jdbc:mysql://localhost:3306/cyongblog?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+      url: jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8
       username: root
       password: 123456
       initial-size: 5
@@ -66,7 +66,7 @@ server:
         http-only: true
   tomcat:
     uri-encoding: UTF-8
-  port: 8080
+  port: 8888
 
 #pagehelper配置
 pagehelper:

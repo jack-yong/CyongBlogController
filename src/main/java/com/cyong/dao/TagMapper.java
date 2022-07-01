@@ -1,8 +1,11 @@
 package com.cyong.dao;
 
 import com.cyong.model.Tag;
+import com.cyong.model.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 @Mapper
 @Repository
@@ -54,4 +57,6 @@ public interface TagMapper {
      * @mbggenerated Mon Oct 25 11:12:50 CST 2021
      */
     int updateByPrimaryKey(Tag record);
+
+    List<Tag> vagueSearchByTagName(String tagName);
 }

@@ -12,7 +12,7 @@
     <result column="category_icon" property="categoryIcon" jdbcType="VARCHAR" />
     <result column="category_rank" property="categoryRank" jdbcType="INTEGER" />
     <result column="category_is_deleted" property="categoryIsDeleted" jdbcType="TINYINT" />
-    <result column="category_create_time" property="categoryCreateTime" jdbcType="TIMESTAMP" />
+    <result column="category_create_time" property="categoryCreateTime"  jdbcType="TIMESTAMP" />
   </resultMap>
   <sql id="Base_Column_List" >
     <!--
@@ -143,4 +143,25 @@
       category_create_time = #{categoryCreateTime,jdbcType=TIMESTAMP}
     where category_id = #{categoryId,jdbcType=INTEGER}
   </update>
+
+  <select id="searchByCateName"  resultMap="BaseResultMap" parameterType="string">
+    select
+    <include refid="Base_Column_List" />
+    from tb_category
+    where category_name =#{cateName}
+    limit 1
+  </select>
+
+  <select id="searchAllCategory" resultMap="BaseResultMap" >
+    select
+    <include refid="Base_Column_List" />
+    from tb_category
+  </select>
+
+  <select id="cateVagueSearch" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from tb_category
+    where category_name like concat('%',#{cateName,jdbcType=VARCHAR},'%')
+  </select>
 </mapper>

@@ -1,5 +1,7 @@
 package com.cyong.model;
 
+import com.alibaba.fastjson.annotation.JSONField;
+
 import java.util.Date;
 
 public class Category {
@@ -49,6 +51,7 @@ public class Category {
      *
      * @mbggenerated Mon Oct 25 11:12:50 CST 2021
      */
+    //JSONField比JsonFormat好用
     private Date categoryCreateTime;
 
     /**

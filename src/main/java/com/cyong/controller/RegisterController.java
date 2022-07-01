@@ -23,14 +23,14 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 public class RegisterController {
     @Autowired
-    UserService userService;
+    private UserService userService;
 
     @RequestMapping("/user/register")
     @ResponseBody
     public String userRegister(@RequestParam(name ="username") String username,
                                @RequestParam(name="password") String password,
                                @RequestParam(name="email") String email,
-                               @RequestParam(name="email") String phone){
+                               @RequestParam(name="phone") String phone){
         try{
             DataMap dataMap = userService.insert(username, password, email, phone);
             return JsonResult.build(dataMap).toJSON();
