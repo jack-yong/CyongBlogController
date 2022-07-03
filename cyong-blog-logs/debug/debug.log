@@ -217,3 +217,390 @@
 2022-07-01 21:06:27,787 [http-nio-8888-exec-8] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 215629
 2022-07-01 21:07:28,101 [http-nio-8888-exec-9] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 60279
 2022-07-01 21:12:16,603 [http-nio-8888-exec-1] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 68102
+2022-07-02 14:57:28,706 [main] INFO  [com.cyong.CyongBlog] - Starting CyongBlog using Java 1.8.0_281 on DESKTOP-0DKFFPP with PID 2716 (E:\LabProject\CyongBlog\controller\target\classes started by 18074 in E:\LabProject\CyongBlog\controller)
+2022-07-02 14:57:28,727 [main] INFO  [com.cyong.CyongBlog] - No active profile set, falling back to default profiles: default
+2022-07-02 14:57:29,756 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-02 14:57:29,756 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-02 14:57:29,803 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
+2022-07-02 14:57:30,541 [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8888 (http)
+2022-07-02 14:57:30,557 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8888"]
+2022-07-02 14:57:30,557 [main] INFO  [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2022-07-02 14:57:30,557 [main] INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2022-07-02 14:57:30,749 [main] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2022-07-02 14:57:30,749 [main] INFO  [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 1883 ms
+2022-07-02 14:57:31,222 [main] ERROR [com.alibaba.druid.filter.FilterManager] - load filter error, filter not found : spring-boot-starter-log4j2
+2022-07-02 14:57:33,177 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8888"]
+2022-07-02 14:57:33,208 [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat started on port(s): 8888 (http) with context path ''
+2022-07-02 14:57:33,208 [main] INFO  [com.cyong.CyongBlog] - Started CyongBlog in 5.686 seconds (JVM running for 10.228)
+2022-07-02 14:59:04,862 [http-nio-8888-exec-1] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-02 14:59:04,862 [http-nio-8888-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2022-07-02 14:59:04,862 [http-nio-8888-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] - Completed initialization in 0 ms
+2022-07-02 14:59:05,567 [http-nio-8888-exec-1] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} inited
+2022-07-02 15:00:50,734 [http-nio-8888-exec-2] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 88054
+2022-07-02 15:00:50,736 [http-nio-8888-exec-2] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 105188
+2022-07-02 15:00:50,738 [http-nio-8888-exec-2] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 105198
+2022-07-02 15:00:50,742 [http-nio-8888-exec-2] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 105207
+2022-07-02 15:00:50,745 [http-nio-8888-exec-2] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 105232
+2022-07-02 15:02:27,182 [http-nio-8888-exec-5] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 76329
+2022-07-02 15:02:27,184 [http-nio-8888-exec-5] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 96433
+2022-07-02 15:38:31,576 [http-nio-8888-exec-7] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 2113283
+2022-07-02 15:55:14,842 [http-nio-8888-exec-8] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 976773
+2022-07-02 15:57:33,235 [http-nio-8888-exec-2] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 112698
+2022-07-02 16:55:43,082 [http-nio-8888-exec-1] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 3481266
+2022-07-02 20:35:03,845 [http-nio-8888-exec-7] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 13157091
+2022-07-02 20:36:19,491 [http-nio-8888-exec-9] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 75593
+2022-07-02 20:48:59,531 [http-nio-8888-exec-6] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 755856
+2022-07-02 20:52:12,717 [http-nio-8888-exec-6] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 139517
+2022-07-03 14:26:27,162 [main] INFO  [com.cyong.CyongBlog] - Starting CyongBlog using Java 1.8.0_281 on DESKTOP-0DKFFPP with PID 2092 (E:\LabProject\CyongBlog\controller\target\classes started by 18074 in E:\LabProject\CyongBlog\controller)
+2022-07-03 14:26:27,225 [main] INFO  [com.cyong.CyongBlog] - No active profile set, falling back to default profiles: default
+2022-07-03 14:26:28,336 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-03 14:26:28,352 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-03 14:26:28,430 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 23 ms. Found 0 Redis repository interfaces.
+2022-07-03 14:26:29,244 [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8888 (http)
+2022-07-03 14:26:29,259 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8888"]
+2022-07-03 14:26:29,259 [main] INFO  [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2022-07-03 14:26:29,259 [main] INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2022-07-03 14:26:29,384 [main] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2022-07-03 14:26:29,384 [main] INFO  [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 2112 ms
+2022-07-03 14:26:30,106 [main] ERROR [com.alibaba.druid.filter.FilterManager] - load filter error, filter not found : spring-boot-starter-log4j2
+2022-07-03 14:26:31,950 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8888"]
+2022-07-03 14:26:31,965 [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat started on port(s): 8888 (http) with context path ''
+2022-07-03 14:26:31,981 [main] INFO  [com.cyong.CyongBlog] - Started CyongBlog in 5.505 seconds (JVM running for 10.374)
+2022-07-03 14:28:19,422 [http-nio-8888-exec-1] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-03 14:28:19,422 [http-nio-8888-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2022-07-03 14:28:19,422 [http-nio-8888-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] - Completed initialization in 0 ms
+2022-07-03 14:29:03,884 [main] INFO  [com.cyong.CyongBlog] - Starting CyongBlog using Java 1.8.0_281 on DESKTOP-0DKFFPP with PID 16380 (E:\LabProject\CyongBlog\controller\target\classes started by 18074 in E:\LabProject\CyongBlog\controller)
+2022-07-03 14:29:03,950 [main] INFO  [com.cyong.CyongBlog] - No active profile set, falling back to default profiles: default
+2022-07-03 14:29:05,030 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-03 14:29:05,030 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-03 14:29:05,061 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2022-07-03 14:29:05,765 [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8888 (http)
+2022-07-03 14:29:05,780 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8888"]
+2022-07-03 14:29:05,780 [main] INFO  [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2022-07-03 14:29:05,780 [main] INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2022-07-03 14:29:05,921 [main] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2022-07-03 14:29:05,921 [main] INFO  [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 1877 ms
+2022-07-03 14:29:06,328 [main] ERROR [com.alibaba.druid.filter.FilterManager] - load filter error, filter not found : spring-boot-starter-log4j2
+2022-07-03 14:29:07,598 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8888"]
+2022-07-03 14:29:07,613 [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat started on port(s): 8888 (http) with context path ''
+2022-07-03 14:29:07,629 [main] INFO  [com.cyong.CyongBlog] - Started CyongBlog in 4.559 seconds (JVM running for 9.218)
+2022-07-03 14:29:13,662 [http-nio-8888-exec-1] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-03 14:29:13,662 [http-nio-8888-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2022-07-03 14:29:13,667 [http-nio-8888-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] - Completed initialization in 5 ms
+2022-07-03 14:49:02,253 [http-nio-8888-exec-2] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} inited
+2022-07-03 15:06:52,118 [main] INFO  [com.cyong.CyongBlog] - Starting CyongBlog using Java 1.8.0_281 on DESKTOP-0DKFFPP with PID 9072 (E:\LabProject\CyongBlog\controller\target\classes started by 18074 in E:\LabProject\CyongBlog\controller)
+2022-07-03 15:06:52,139 [main] INFO  [com.cyong.CyongBlog] - No active profile set, falling back to default profiles: default
+2022-07-03 15:06:53,518 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-03 15:06:53,525 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-03 15:06:53,590 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+2022-07-03 15:06:54,676 [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8888 (http)
+2022-07-03 15:06:54,694 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8888"]
+2022-07-03 15:06:54,695 [main] INFO  [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2022-07-03 15:06:54,695 [main] INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2022-07-03 15:06:54,914 [main] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2022-07-03 15:06:54,914 [main] INFO  [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 2611 ms
+2022-07-03 15:06:55,494 [main] ERROR [com.alibaba.druid.filter.FilterManager] - load filter error, filter not found : spring-boot-starter-log4j2
+2022-07-03 15:06:58,592 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8888"]
+2022-07-03 15:06:58,639 [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat started on port(s): 8888 (http) with context path ''
+2022-07-03 15:06:58,654 [main] INFO  [com.cyong.CyongBlog] - Started CyongBlog in 7.779 seconds (JVM running for 12.463)
+2022-07-03 15:07:24,606 [http-nio-8888-exec-2] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-03 15:07:24,606 [http-nio-8888-exec-2] INFO  [org.springframework.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2022-07-03 15:07:24,608 [http-nio-8888-exec-2] INFO  [org.springframework.web.servlet.DispatcherServlet] - Completed initialization in 2 ms
+2022-07-03 15:07:25,126 [http-nio-8888-exec-2] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} inited
+2022-07-03 15:08:54,156 [main] INFO  [com.cyong.CyongBlog] - Starting CyongBlog using Java 1.8.0_281 on DESKTOP-0DKFFPP with PID 15380 (E:\LabProject\CyongBlog\controller\target\classes started by 18074 in E:\LabProject\CyongBlog\controller)
+2022-07-03 15:08:54,203 [main] INFO  [com.cyong.CyongBlog] - No active profile set, falling back to default profiles: default
+2022-07-03 15:08:55,048 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-03 15:08:55,048 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-03 15:08:55,080 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+2022-07-03 15:08:55,737 [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8888 (http)
+2022-07-03 15:08:55,752 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8888"]
+2022-07-03 15:08:55,752 [main] INFO  [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2022-07-03 15:08:55,752 [main] INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2022-07-03 15:08:55,877 [main] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2022-07-03 15:08:55,877 [main] INFO  [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 1627 ms
+2022-07-03 15:08:56,316 [main] ERROR [com.alibaba.druid.filter.FilterManager] - load filter error, filter not found : spring-boot-starter-log4j2
+2022-07-03 15:08:57,836 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8888"]
+2022-07-03 15:08:57,867 [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat started on port(s): 8888 (http) with context path ''
+2022-07-03 15:08:57,883 [main] INFO  [com.cyong.CyongBlog] - Started CyongBlog in 4.445 seconds (JVM running for 8.749)
+2022-07-03 15:09:01,232 [http-nio-8888-exec-1] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-03 15:09:01,233 [http-nio-8888-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2022-07-03 15:09:01,234 [http-nio-8888-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] - Completed initialization in 1 ms
+2022-07-03 15:09:01,671 [http-nio-8888-exec-1] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} inited
+2022-07-03 15:11:33,399 [main] INFO  [com.cyong.CyongBlog] - Starting CyongBlog using Java 1.8.0_281 on DESKTOP-0DKFFPP with PID 13944 (E:\LabProject\CyongBlog\controller\target\classes started by 18074 in E:\LabProject\CyongBlog\controller)
+2022-07-03 15:11:33,446 [main] INFO  [com.cyong.CyongBlog] - No active profile set, falling back to default profiles: default
+2022-07-03 15:11:34,228 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-03 15:11:34,228 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-03 15:11:34,260 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2022-07-03 15:11:34,839 [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8888 (http)
+2022-07-03 15:11:34,854 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8888"]
+2022-07-03 15:11:34,854 [main] INFO  [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2022-07-03 15:11:34,854 [main] INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2022-07-03 15:11:34,964 [main] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2022-07-03 15:11:34,964 [main] INFO  [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 1471 ms
+2022-07-03 15:11:35,715 [main] ERROR [com.alibaba.druid.filter.FilterManager] - load filter error, filter not found : spring-boot-starter-log4j2
+2022-07-03 15:11:39,061 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8888"]
+2022-07-03 15:11:39,087 [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat started on port(s): 8888 (http) with context path ''
+2022-07-03 15:11:39,102 [main] INFO  [com.cyong.CyongBlog] - Started CyongBlog in 6.298 seconds (JVM running for 9.252)
+2022-07-03 15:11:39,250 [http-nio-8888-exec-1] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-03 15:11:39,252 [http-nio-8888-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2022-07-03 15:11:39,255 [http-nio-8888-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] - Completed initialization in 3 ms
+2022-07-03 15:11:39,820 [http-nio-8888-exec-1] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} inited
+2022-07-03 15:12:37,706 [main] INFO  [com.cyong.CyongBlog] - Starting CyongBlog using Java 1.8.0_281 on DESKTOP-0DKFFPP with PID 5720 (E:\LabProject\CyongBlog\controller\target\classes started by 18074 in E:\LabProject\CyongBlog\controller)
+2022-07-03 15:12:37,737 [main] INFO  [com.cyong.CyongBlog] - No active profile set, falling back to default profiles: default
+2022-07-03 15:12:38,833 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-03 15:12:38,833 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-03 15:12:38,864 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2022-07-03 15:12:39,474 [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8888 (http)
+2022-07-03 15:12:39,474 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8888"]
+2022-07-03 15:12:39,474 [main] INFO  [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2022-07-03 15:12:39,474 [main] INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2022-07-03 15:12:39,599 [main] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2022-07-03 15:12:39,599 [main] INFO  [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 1722 ms
+2022-07-03 15:12:39,881 [main] ERROR [com.alibaba.druid.filter.FilterManager] - load filter error, filter not found : spring-boot-starter-log4j2
+2022-07-03 15:12:40,914 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8888"]
+2022-07-03 15:12:40,930 [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat started on port(s): 8888 (http) with context path ''
+2022-07-03 15:12:40,948 [main] INFO  [com.cyong.CyongBlog] - Started CyongBlog in 3.93 seconds (JVM running for 6.417)
+2022-07-03 15:12:48,567 [http-nio-8888-exec-1] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-03 15:12:48,567 [http-nio-8888-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2022-07-03 15:12:48,569 [http-nio-8888-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] - Completed initialization in 1 ms
+2022-07-03 15:12:49,234 [http-nio-8888-exec-1] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} inited
+2022-07-03 15:13:44,393 [main] INFO  [com.cyong.CyongBlog] - Starting CyongBlog using Java 1.8.0_281 on DESKTOP-0DKFFPP with PID 2596 (E:\LabProject\CyongBlog\controller\target\classes started by 18074 in E:\LabProject\CyongBlog\controller)
+2022-07-03 15:13:44,456 [main] INFO  [com.cyong.CyongBlog] - No active profile set, falling back to default profiles: default
+2022-07-03 15:13:45,661 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-03 15:13:45,661 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-03 15:13:45,693 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
+2022-07-03 15:13:46,272 [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8888 (http)
+2022-07-03 15:13:46,288 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8888"]
+2022-07-03 15:13:46,288 [main] INFO  [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2022-07-03 15:13:46,288 [main] INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2022-07-03 15:13:46,397 [main] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2022-07-03 15:13:46,397 [main] INFO  [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 1816 ms
+2022-07-03 15:13:46,710 [main] ERROR [com.alibaba.druid.filter.FilterManager] - load filter error, filter not found : spring-boot-starter-log4j2
+2022-07-03 15:13:47,893 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8888"]
+2022-07-03 15:13:47,909 [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat started on port(s): 8888 (http) with context path ''
+2022-07-03 15:13:47,925 [main] INFO  [com.cyong.CyongBlog] - Started CyongBlog in 4.155 seconds (JVM running for 7.247)
+2022-07-03 15:13:52,219 [http-nio-8888-exec-2] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-03 15:13:52,220 [http-nio-8888-exec-2] INFO  [org.springframework.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2022-07-03 15:13:52,221 [http-nio-8888-exec-2] INFO  [org.springframework.web.servlet.DispatcherServlet] - Completed initialization in 1 ms
+2022-07-03 15:13:52,649 [http-nio-8888-exec-2] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} inited
+2022-07-03 15:14:24,791 [main] INFO  [com.cyong.CyongBlog] - Starting CyongBlog using Java 1.8.0_281 on DESKTOP-0DKFFPP with PID 15028 (E:\LabProject\CyongBlog\controller\target\classes started by 18074 in E:\LabProject\CyongBlog\controller)
+2022-07-03 15:14:24,837 [main] INFO  [com.cyong.CyongBlog] - No active profile set, falling back to default profiles: default
+2022-07-03 15:14:25,604 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-03 15:14:25,604 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-03 15:14:25,635 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2022-07-03 15:14:26,200 [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8888 (http)
+2022-07-03 15:14:26,216 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8888"]
+2022-07-03 15:14:26,216 [main] INFO  [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2022-07-03 15:14:26,216 [main] INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2022-07-03 15:14:26,325 [main] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2022-07-03 15:14:26,325 [main] INFO  [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 1441 ms
+2022-07-03 15:14:26,622 [main] ERROR [com.alibaba.druid.filter.FilterManager] - load filter error, filter not found : spring-boot-starter-log4j2
+2022-07-03 15:14:28,344 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8888"]
+2022-07-03 15:14:28,422 [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat started on port(s): 8888 (http) with context path ''
+2022-07-03 15:14:28,469 [main] INFO  [com.cyong.CyongBlog] - Started CyongBlog in 4.236 seconds (JVM running for 7.063)
+2022-07-03 15:14:32,618 [http-nio-8888-exec-2] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-03 15:14:32,620 [http-nio-8888-exec-2] INFO  [org.springframework.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2022-07-03 15:14:32,622 [http-nio-8888-exec-2] INFO  [org.springframework.web.servlet.DispatcherServlet] - Completed initialization in 2 ms
+2022-07-03 15:14:33,093 [http-nio-8888-exec-2] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} inited
+2022-07-03 15:16:59,346 [main] INFO  [com.cyong.CyongBlog] - Starting CyongBlog using Java 1.8.0_281 on DESKTOP-0DKFFPP with PID 16856 (E:\LabProject\CyongBlog\controller\target\classes started by 18074 in E:\LabProject\CyongBlog\controller)
+2022-07-03 15:16:59,361 [main] INFO  [com.cyong.CyongBlog] - No active profile set, falling back to default profiles: default
+2022-07-03 15:17:00,289 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-03 15:17:00,289 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-03 15:17:00,320 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+2022-07-03 15:17:01,018 [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8888 (http)
+2022-07-03 15:17:01,018 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8888"]
+2022-07-03 15:17:01,018 [main] INFO  [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2022-07-03 15:17:01,018 [main] INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2022-07-03 15:17:01,143 [main] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2022-07-03 15:17:01,143 [main] INFO  [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 1688 ms
+2022-07-03 15:17:01,471 [main] ERROR [com.alibaba.druid.filter.FilterManager] - load filter error, filter not found : spring-boot-starter-log4j2
+2022-07-03 15:17:02,671 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8888"]
+2022-07-03 15:17:02,703 [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat started on port(s): 8888 (http) with context path ''
+2022-07-03 15:17:02,719 [main] INFO  [com.cyong.CyongBlog] - Started CyongBlog in 4.433 seconds (JVM running for 6.993)
+2022-07-03 15:17:09,704 [http-nio-8888-exec-2] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-03 15:17:09,705 [http-nio-8888-exec-2] INFO  [org.springframework.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2022-07-03 15:17:09,707 [http-nio-8888-exec-2] INFO  [org.springframework.web.servlet.DispatcherServlet] - Completed initialization in 2 ms
+2022-07-03 15:17:10,131 [http-nio-8888-exec-2] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} inited
+2022-07-03 15:21:19,163 [http-nio-8888-exec-4] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 248618
+2022-07-03 15:21:19,168 [http-nio-8888-exec-4] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 249049
+2022-07-03 15:21:19,170 [http-nio-8888-exec-4] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 249060
+2022-07-03 15:21:19,174 [http-nio-8888-exec-4] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 249068
+2022-07-03 15:21:19,176 [http-nio-8888-exec-4] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 249083
+2022-07-03 15:22:26,556 [http-nio-8888-exec-8] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 66183
+2022-07-03 15:22:26,562 [http-nio-8888-exec-8] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 67377
+2022-07-03 15:24:41,830 [http-nio-8888-exec-10] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 107464
+2022-07-03 16:03:44,199 [http-nio-8888-exec-3] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 2270184
+2022-07-03 16:06:40,630 [http-nio-8888-exec-9] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 133316
+2022-07-03 16:12:31,843 [http-nio-8888-exec-5] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 335479
+2022-07-03 16:34:52,657 [http-nio-8888-exec-8] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 1325934
+2022-07-03 17:06:52,657 [http-nio-8888-exec-4] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 1917755
+2022-07-03 18:35:35,918 [http-nio-8888-exec-1] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 5284459
+2022-07-03 19:24:15,669 [http-nio-8888-exec-9] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 2853183
+2022-07-03 19:25:56,526 [http-nio-8888-exec-5] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 64844
+2022-07-03 19:41:25,977 [http-nio-8888-exec-10] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 901014
+2022-07-03 19:52:42,874 [main] INFO  [com.cyong.CyongBlog] - Starting CyongBlog using Java 1.8.0_281 on DESKTOP-0DKFFPP with PID 5992 (E:\LabProject\CyongBlog\controller\target\classes started by 18074 in E:\LabProject\CyongBlog\controller)
+2022-07-03 19:52:42,937 [main] INFO  [com.cyong.CyongBlog] - No active profile set, falling back to default profiles: default
+2022-07-03 19:52:43,844 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-03 19:52:43,844 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-03 19:52:43,876 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 19 ms. Found 0 Redis repository interfaces.
+2022-07-03 19:52:44,911 [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8888 (http)
+2022-07-03 19:52:44,911 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8888"]
+2022-07-03 19:52:44,911 [main] INFO  [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2022-07-03 19:52:44,911 [main] INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2022-07-03 19:52:45,037 [main] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2022-07-03 19:52:45,037 [main] INFO  [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 2053 ms
+2022-07-03 19:52:45,381 [main] ERROR [com.alibaba.druid.filter.FilterManager] - load filter error, filter not found : spring-boot-starter-log4j2
+2022-07-03 19:52:46,628 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8888"]
+2022-07-03 19:52:46,660 [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat started on port(s): 8888 (http) with context path ''
+2022-07-03 19:52:46,660 [main] INFO  [com.cyong.CyongBlog] - Started CyongBlog in 4.449 seconds (JVM running for 7.208)
+2022-07-03 19:53:19,514 [http-nio-8888-exec-1] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-03 19:53:19,514 [http-nio-8888-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2022-07-03 19:53:19,516 [http-nio-8888-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] - Completed initialization in 1 ms
+2022-07-03 19:53:19,917 [http-nio-8888-exec-1] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} inited
+2022-07-03 20:43:09,279 [http-nio-8888-exec-4] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 2988849
+2022-07-03 20:43:09,293 [http-nio-8888-exec-4] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 2989394
+2022-07-03 20:43:09,297 [http-nio-8888-exec-4] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 2989405
+2022-07-03 20:43:09,300 [http-nio-8888-exec-4] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 2989414
+2022-07-03 20:43:09,306 [http-nio-8888-exec-4] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 2989434
+2022-07-03 21:40:08,108 [http-nio-8888-exec-6] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 3418754
+2022-07-03 21:49:15,206 [main] INFO  [com.cyong.CyongBlog] - Starting CyongBlog using Java 1.8.0_281 on DESKTOP-0DKFFPP with PID 17404 (E:\LabProject\CyongBlog\controller\target\classes started by 18074 in E:\LabProject\CyongBlog\controller)
+2022-07-03 21:49:15,295 [main] INFO  [com.cyong.CyongBlog] - No active profile set, falling back to default profiles: default
+2022-07-03 21:49:17,530 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-03 21:49:17,536 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-03 21:49:17,648 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 49 ms. Found 0 Redis repository interfaces.
+2022-07-03 21:49:18,858 [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8888 (http)
+2022-07-03 21:49:18,877 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8888"]
+2022-07-03 21:49:18,877 [main] INFO  [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2022-07-03 21:49:18,878 [main] INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2022-07-03 21:49:19,067 [main] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2022-07-03 21:49:19,068 [main] INFO  [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 3614 ms
+2022-07-03 21:49:19,470 [main] ERROR [com.alibaba.druid.filter.FilterManager] - load filter error, filter not found : spring-boot-starter-log4j2
+2022-07-03 21:49:20,994 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8888"]
+2022-07-03 21:49:21,017 [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat started on port(s): 8888 (http) with context path ''
+2022-07-03 21:49:21,029 [main] INFO  [com.cyong.CyongBlog] - Started CyongBlog in 6.607 seconds (JVM running for 10.836)
+2022-07-03 21:49:27,347 [http-nio-8888-exec-2] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-03 21:49:27,349 [http-nio-8888-exec-2] INFO  [org.springframework.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2022-07-03 21:49:27,350 [http-nio-8888-exec-2] INFO  [org.springframework.web.servlet.DispatcherServlet] - Completed initialization in 1 ms
+2022-07-03 21:49:27,821 [http-nio-8888-exec-2] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} inited
+2022-07-03 21:53:51,124 [http-nio-8888-exec-8] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 190084
+2022-07-03 21:53:51,128 [http-nio-8888-exec-8] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 263324
+2022-07-03 21:53:51,131 [http-nio-8888-exec-8] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 263336
+2022-07-03 21:53:51,138 [http-nio-8888-exec-8] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 263359
+2022-07-03 21:53:51,142 [http-nio-8888-exec-8] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 263387
+2022-07-03 21:55:25,495 [main] INFO  [com.cyong.CyongBlog] - Starting CyongBlog using Java 1.8.0_281 on DESKTOP-0DKFFPP with PID 16100 (E:\LabProject\CyongBlog\controller\target\classes started by 18074 in E:\LabProject\CyongBlog\controller)
+2022-07-03 21:55:25,542 [main] INFO  [com.cyong.CyongBlog] - No active profile set, falling back to default profiles: default
+2022-07-03 21:55:26,371 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-03 21:55:26,371 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-03 21:55:26,402 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
+2022-07-03 21:55:27,045 [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8888 (http)
+2022-07-03 21:55:27,060 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8888"]
+2022-07-03 21:55:27,060 [main] INFO  [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2022-07-03 21:55:27,060 [main] INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2022-07-03 21:55:27,170 [main] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2022-07-03 21:55:27,170 [main] INFO  [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 1581 ms
+2022-07-03 21:55:27,852 [main] ERROR [com.alibaba.druid.filter.FilterManager] - load filter error, filter not found : spring-boot-starter-log4j2
+2022-07-03 21:55:29,534 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8888"]
+2022-07-03 21:55:29,565 [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat started on port(s): 8888 (http) with context path ''
+2022-07-03 21:55:29,578 [main] INFO  [com.cyong.CyongBlog] - Started CyongBlog in 4.785 seconds (JVM running for 7.484)
+2022-07-03 21:55:31,167 [http-nio-8888-exec-2] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-03 21:55:31,169 [http-nio-8888-exec-2] INFO  [org.springframework.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2022-07-03 21:55:31,173 [http-nio-8888-exec-2] INFO  [org.springframework.web.servlet.DispatcherServlet] - Completed initialization in 4 ms
+2022-07-03 21:55:31,680 [http-nio-8888-exec-2] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} inited
+2022-07-03 22:01:43,210 [http-nio-8888-exec-5] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 371194
+2022-07-03 22:01:43,213 [http-nio-8888-exec-5] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 371546
+2022-07-03 22:01:43,215 [http-nio-8888-exec-5] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 371553
+2022-07-03 22:01:43,219 [http-nio-8888-exec-5] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 371566
+2022-07-03 22:01:43,221 [http-nio-8888-exec-5] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 371580
+2022-07-03 22:02:42,177 [main] INFO  [com.cyong.CyongBlog] - Starting CyongBlog using Java 1.8.0_281 on DESKTOP-0DKFFPP with PID 19392 (E:\LabProject\CyongBlog\controller\target\classes started by 18074 in E:\LabProject\CyongBlog\controller)
+2022-07-03 22:02:42,239 [main] INFO  [com.cyong.CyongBlog] - No active profile set, falling back to default profiles: default
+2022-07-03 22:02:43,116 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-03 22:02:43,116 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-03 22:02:43,147 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+2022-07-03 22:02:43,850 [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8888 (http)
+2022-07-03 22:02:43,866 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8888"]
+2022-07-03 22:02:43,866 [main] INFO  [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2022-07-03 22:02:43,866 [main] INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2022-07-03 22:02:43,992 [main] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2022-07-03 22:02:43,992 [main] INFO  [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 1690 ms
+2022-07-03 22:02:44,787 [main] ERROR [com.alibaba.druid.filter.FilterManager] - load filter error, filter not found : spring-boot-starter-log4j2
+2022-07-03 22:02:47,555 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8888"]
+2022-07-03 22:02:47,584 [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat started on port(s): 8888 (http) with context path ''
+2022-07-03 22:02:47,598 [main] INFO  [com.cyong.CyongBlog] - Started CyongBlog in 6.136 seconds (JVM running for 8.652)
+2022-07-03 22:02:47,752 [http-nio-8888-exec-1] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-03 22:02:47,752 [http-nio-8888-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2022-07-03 22:02:47,755 [http-nio-8888-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] - Completed initialization in 2 ms
+2022-07-03 22:02:48,183 [http-nio-8888-exec-1] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} inited
+2022-07-03 22:06:28,738 [main] INFO  [com.cyong.CyongBlog] - Starting CyongBlog using Java 1.8.0_281 on DESKTOP-0DKFFPP with PID 8292 (E:\LabProject\CyongBlog\controller\target\classes started by 18074 in E:\LabProject\CyongBlog\controller)
+2022-07-03 22:06:28,785 [main] INFO  [com.cyong.CyongBlog] - No active profile set, falling back to default profiles: default
+2022-07-03 22:06:29,583 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-03 22:06:29,583 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-03 22:06:29,630 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2022-07-03 22:06:30,588 [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8888 (http)
+2022-07-03 22:06:30,604 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8888"]
+2022-07-03 22:06:30,604 [main] INFO  [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2022-07-03 22:06:30,604 [main] INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2022-07-03 22:06:30,745 [main] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2022-07-03 22:06:30,745 [main] INFO  [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 1914 ms
+2022-07-03 22:06:31,067 [main] ERROR [com.alibaba.druid.filter.FilterManager] - load filter error, filter not found : spring-boot-starter-log4j2
+2022-07-03 22:06:32,310 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8888"]
+2022-07-03 22:06:32,326 [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat started on port(s): 8888 (http) with context path ''
+2022-07-03 22:06:32,341 [main] INFO  [com.cyong.CyongBlog] - Started CyongBlog in 4.32 seconds (JVM running for 6.718)
+2022-07-03 22:06:37,592 [http-nio-8888-exec-2] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-03 22:06:37,592 [http-nio-8888-exec-2] INFO  [org.springframework.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2022-07-03 22:06:37,596 [http-nio-8888-exec-2] INFO  [org.springframework.web.servlet.DispatcherServlet] - Completed initialization in 4 ms
+2022-07-03 22:06:37,959 [http-nio-8888-exec-2] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} inited
+2022-07-03 22:07:39,822 [main] INFO  [com.cyong.CyongBlog] - Starting CyongBlog using Java 1.8.0_281 on DESKTOP-0DKFFPP with PID 2120 (E:\LabProject\CyongBlog\controller\target\classes started by 18074 in E:\LabProject\CyongBlog\controller)
+2022-07-03 22:07:39,853 [main] INFO  [com.cyong.CyongBlog] - No active profile set, falling back to default profiles: default
+2022-07-03 22:07:40,834 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-03 22:07:40,834 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-03 22:07:40,866 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+2022-07-03 22:07:41,445 [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8888 (http)
+2022-07-03 22:07:41,461 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8888"]
+2022-07-03 22:07:41,461 [main] INFO  [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2022-07-03 22:07:41,461 [main] INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2022-07-03 22:07:41,586 [main] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2022-07-03 22:07:41,586 [main] INFO  [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 1611 ms
+2022-07-03 22:07:41,978 [main] ERROR [com.alibaba.druid.filter.FilterManager] - load filter error, filter not found : spring-boot-starter-log4j2
+2022-07-03 22:07:43,550 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8888"]
+2022-07-03 22:07:43,592 [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat started on port(s): 8888 (http) with context path ''
+2022-07-03 22:07:43,631 [main] INFO  [com.cyong.CyongBlog] - Started CyongBlog in 4.733 seconds (JVM running for 7.865)
+2022-07-03 22:07:45,114 [http-nio-8888-exec-2] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-03 22:07:45,114 [http-nio-8888-exec-2] INFO  [org.springframework.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2022-07-03 22:07:45,118 [http-nio-8888-exec-2] INFO  [org.springframework.web.servlet.DispatcherServlet] - Completed initialization in 4 ms
+2022-07-03 22:07:46,166 [http-nio-8888-exec-2] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} inited
+2022-07-03 22:08:33,630 [main] INFO  [com.cyong.CyongBlog] - Starting CyongBlog using Java 1.8.0_281 on DESKTOP-0DKFFPP with PID 11520 (E:\LabProject\CyongBlog\controller\target\classes started by 18074 in E:\LabProject\CyongBlog\controller)
+2022-07-03 22:08:33,646 [main] INFO  [com.cyong.CyongBlog] - No active profile set, falling back to default profiles: default
+2022-07-03 22:08:34,682 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-03 22:08:34,698 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-03 22:08:34,760 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 21 ms. Found 0 Redis repository interfaces.
+2022-07-03 22:08:35,970 [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8888 (http)
+2022-07-03 22:08:35,986 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8888"]
+2022-07-03 22:08:35,986 [main] INFO  [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2022-07-03 22:08:35,986 [main] INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2022-07-03 22:08:36,142 [main] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2022-07-03 22:08:36,142 [main] INFO  [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 2449 ms
+2022-07-03 22:08:37,648 [main] ERROR [com.alibaba.druid.filter.FilterManager] - load filter error, filter not found : spring-boot-starter-log4j2
+2022-07-03 22:08:49,886 [main] INFO  [com.cyong.CyongBlog] - Starting CyongBlog using Java 1.8.0_281 on DESKTOP-0DKFFPP with PID 12212 (E:\LabProject\CyongBlog\controller\target\classes started by 18074 in E:\LabProject\CyongBlog\controller)
+2022-07-03 22:08:49,901 [main] INFO  [com.cyong.CyongBlog] - No active profile set, falling back to default profiles: default
+2022-07-03 22:08:50,900 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-03 22:08:50,900 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-03 22:08:50,932 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2022-07-03 22:08:51,495 [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8888 (http)
+2022-07-03 22:08:51,511 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8888"]
+2022-07-03 22:08:51,511 [main] INFO  [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2022-07-03 22:08:51,511 [main] INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2022-07-03 22:08:51,620 [main] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2022-07-03 22:08:51,620 [main] INFO  [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 1642 ms
+2022-07-03 22:08:51,950 [main] ERROR [com.alibaba.druid.filter.FilterManager] - load filter error, filter not found : spring-boot-starter-log4j2
+2022-07-03 22:08:53,004 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8888"]
+2022-07-03 22:08:53,019 [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat started on port(s): 8888 (http) with context path ''
+2022-07-03 22:08:53,035 [main] INFO  [com.cyong.CyongBlog] - Started CyongBlog in 4.052 seconds (JVM running for 6.309)
+2022-07-03 22:09:17,532 [http-nio-8888-exec-2] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-03 22:09:17,533 [http-nio-8888-exec-2] INFO  [org.springframework.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2022-07-03 22:09:17,534 [http-nio-8888-exec-2] INFO  [org.springframework.web.servlet.DispatcherServlet] - Completed initialization in 1 ms
+2022-07-03 22:09:17,912 [http-nio-8888-exec-2] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} inited
+2022-07-03 22:14:34,673 [http-nio-8888-exec-5] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 316302
+2022-07-03 22:14:34,674 [http-nio-8888-exec-4] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 316737
+2022-07-03 22:14:34,677 [http-nio-8888-exec-5] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 316785
+2022-07-03 22:14:34,679 [http-nio-8888-exec-4] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 316793
+2022-07-03 22:14:34,680 [http-nio-8888-exec-5] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 316811

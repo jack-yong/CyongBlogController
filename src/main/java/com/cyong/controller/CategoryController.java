@@ -40,6 +40,19 @@ public class CategoryController {
 
     }
 
+    @RequestMapping("/category/searchAll")
+    @ResponseBody
+    public  String categorysearchAll()
+    {
+        try{
+            DataMap dataMap = categoryService.searchAllCategory();
+            return JsonResult.build(dataMap).toJSON();
+        }catch (Exception e){
+            log.error("search all category  happened exception", e);
+        }
+        return JsonResult.fail(CodeType.SERVER_EXCEPTION).toJSON();
+    }
+
 
     @RequestMapping("/category/add")
     @ResponseBody

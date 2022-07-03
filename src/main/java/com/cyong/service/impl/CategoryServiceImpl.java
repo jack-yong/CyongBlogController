@@ -105,28 +105,18 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     @Override
-    public DataMap searchAllCategory(int pageSize, int pageNum) {
-        JSONObject categoryobj = new JSONObject();
+    public DataMap searchAllCategory() {
         try {
-            PageHelper.startPage(pageNum, pageSize);
             List<Category> allResult = categoryMapper.searchAllCategory();
-            PageInfo<Category> categorys = new PageInfo<>(allResult);
-            categoryobj.put("totalNum", categorys.getTotal()); //总记录数目
-            categoryobj.put("pages", categorys.getPages()); //总页数
-            categoryobj.put("pagesNum", categorys.getPageNum()); //当前页
-            categoryobj.put("pagesSize", categorys.getSize()); //每页的数量
-            categoryobj.put("data", datafilter.Categoryfilter(allResult));
+
 //            System.out.println(allResult);
-            DataMap objectDataMap = DataMap.success().setData(categoryobj);
+            DataMap objectDataMap = DataMap.success().setData(datafilter.Categoryfilter(allResult));
             return objectDataMap;
         }
         catch (Exception e)
         {
             DataMap searchfail = DataMap.fail(CodeType.UN_EXPECTED_ERROR);
             return searchfail;
-        }
-        finally {
-            PageHelper.clearPage();
         }
 
     }

@@ -44,13 +44,27 @@ public class TagController {
 
     }
 
+    @RequestMapping("/tag/searchAll")
+    public String tagsearchAll(){
+        try{
+            DataMap dataMap = tagService.searchAllTags();
+            return JsonResult.build(dataMap).toJSON();
+        }
+        catch (Exception e)
+        {
+            log.error("tag searchAll get an  exception", e);
+        }
+        return JsonResult.fail(CodeType.SERVER_EXCEPTION).toJSON();
+    }
+
 
     @RequestMapping("/tag/add")
     @ResponseBody
-    public String tagAdd(@RequestParam(name ="tagName") String tagName)
+    public String tagAdd(@RequestParam(name ="tagName") String tagName,
+                         @RequestParam(name ="tagColor") String tagColor)
     {
         try{
-            DataMap dataMap = tagService.addTag(tagName);
+            DataMap dataMap = tagService.addTag(tagName,tagColor);
             return JsonResult.build(dataMap).toJSON();
         }
         catch (Exception e){

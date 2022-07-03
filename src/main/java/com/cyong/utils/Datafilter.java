@@ -63,6 +63,8 @@ public class Datafilter {
             itemobject.put("tagname",item.getTagName());
             itemobject.put("createTime",timeUtil.getParseDateForSix(item.getTagCreateTime()));
             itemobject.put("isdeleted",item.getTagIsDeleted());
+            itemobject.put("tagColor",item.getTagColor());
+//            System.out.println("aaaaaaaaaaaaa"+item.getTagColor());
             tagList.add(itemobject);
         }
         return tagList;

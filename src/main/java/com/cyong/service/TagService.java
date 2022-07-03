@@ -13,9 +13,11 @@ public interface TagService {
 
     DataMap tagVagueSearch(String tagName,int pageSize,int pageNum);
 
-    DataMap addTag(String tagName);
+    DataMap addTag(String tagName,String tagColor);
 
     DataMap searchByTagId(int tagId);
+
+    DataMap searchAllTags();
 
 
 }

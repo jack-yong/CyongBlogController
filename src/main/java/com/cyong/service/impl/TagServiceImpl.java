@@ -41,6 +41,7 @@ public class TagServiceImpl implements TagService {
             tagObject.put("pages", tags.getPages()); //总页数
             tagObject.put("pageNum", tags.getPageNum()); //当前页
             tagObject.put("pagesSize", tags.getSize()); //每页的数量
+//            System.out.println(allResult+"allResultallResultallResult");
             tagObject.put("data", datafilter.Tagfilter(allResult));
             DataMap objectDataMap = DataMap.success().setData(tagObject);
             return objectDataMap;
@@ -55,7 +56,7 @@ public class TagServiceImpl implements TagService {
     }
 
     @Override
-    public DataMap addTag(String tagName) {
+    public DataMap addTag(String tagName,String tagColor) {
         String ntagName = tagName.trim().replace(" ","");
         if(ntagName.equals("")){
             DataMap addfail = DataMap.fail(CodeType.FIND_TAGS_EXIST);
@@ -63,7 +64,7 @@ public class TagServiceImpl implements TagService {
         }
         else{
             Date createTime = new Date();
-            Tag tag =  new Tag(ntagName,0,createTime);
+            Tag tag =  new Tag(ntagName,0,createTime,tagColor);
             try{
                 tagMapper.insert(tag);
                 DataMap success = DataMap.success();
@@ -79,5 +80,18 @@ public class TagServiceImpl implements TagService {
     @Override
     public DataMap searchByTagId(int tagId) {
         return null;
+    }
+
+    @Override
+    public DataMap searchAllTags() {
+        try{
+            List<Tag> allResult = tagMapper.vagueSearchByTagName("");
+            DataMap objectDataMap = DataMap.success().setData(datafilter.Tagfilter(allResult));
+            return objectDataMap;
+        }
+        catch (Exception e){
+            DataMap searchFail = DataMap.fail(CodeType.UN_EXPECTED_ERROR);
+            return searchFail;
+        }
     }
 }

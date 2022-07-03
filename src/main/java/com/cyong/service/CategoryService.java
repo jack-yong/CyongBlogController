@@ -19,7 +19,7 @@ public interface CategoryService {
 
     DataMap addCategory(String catename,String imgurl);
 
-    DataMap searchAllCategory(int pageSize,int pageNum);
+    DataMap searchAllCategory();
 
     DataMap cateVagueSearch(String cateName,int pageSize,int pageNum);
 
