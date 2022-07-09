@@ -1,5 +1,9 @@
 package com.cyong.service;
 
+import com.cyong.utils.DataMap;
+
+import java.util.ArrayList;
+
 /**
  * @BelongsProject: CyongBlogController
  * @BelongsPackage: com.cyong.service
@@ -9,4 +13,7 @@ package com.cyong.service;
  */
 public interface ArticleService {
 
+    DataMap addArticle(String title, String content, int category, String tagList,String coverImage,int status);
+
+    DataMap articleSearch(String title,String category,String tag,int pageSize,int pageNum);
 }

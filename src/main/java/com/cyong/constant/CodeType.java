@@ -21,6 +21,9 @@ public enum CodeType {
     DELETE_ARTICLE_FAIL(201, "删除文章失败"),
     ARTICLE_NOT_EXIST(203, "文章不存在"),
     PUBLISH_ARTICLE_NO_PERMISSION(204, "发表文章没有权限"),
+    ARTICLE_TITLE_BLANK(205, "文章标题为空"),
+    ARTICLE_CONTENT_BLANK(206, "文章内容为空"),
+    ARTICLE_CATEGORY_BLANK(207, "文章类型为空"),
 
     FIND_TAGS_CLOUD(301, "获得所有标签成功"),
     FIND_ARTICLE_BY_TAG(302, "通过标签获得文章成功"),
