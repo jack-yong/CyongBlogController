@@ -1,5 +1,6 @@
 package com.cyong.service;
 
+import com.alibaba.fastjson.JSONObject;
 import com.cyong.utils.DataMap;
 
 /**
@@ -11,7 +12,7 @@ import com.cyong.utils.DataMap;
  */
 public interface TagService {
 
-    DataMap tagVagueSearch(String tagName,int pageSize,int pageNum);
+    DataMap tagVagueSearch(String tagName,int pageSize,int pageNum,String sorter,String filters);
 
     DataMap addTag(String tagName,String tagColor);
 
@@ -19,5 +20,8 @@ public interface TagService {
 
     DataMap searchAllTags();
 
+    JSONObject getTagNums();
+
+    DataMap tagFollowsArticle();
 
 }

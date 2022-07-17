@@ -14,8 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 /**
  * @BelongsProject: CyongBlogController
@@ -123,11 +122,28 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     @Override
-    public DataMap cateVagueSearch(String cateName, int pageSize, int pageNum) {
+    public DataMap cateVagueSearch(String cateName, int pageSize, int pageNum,String sorter,String filters) {
         JSONObject categoryobj = new JSONObject();
+        List<String> categoryList= new ArrayList<String>();
+        String sortField = "";
+        String sortOrder = "";
+        if(!filters.equals("{}")){
+            JSONObject filtersobj = JSONObject.parseObject(filters);
+            String catestatus = (String)filtersobj.get("catestatus");
+            String[] catestatusList = catestatus.split(",");
+//            System.out.println(sorter+"sortersortersorter");
+            for (String status : catestatusList) {
+                categoryList.add(status);
+            }
+        }
+        if(!sorter.equals("")){
+            String[] sorterlist = sorter.split("&&");
+            sortField = sorterlist[0];
+            sortOrder = sorterlist[1];
+        }
         try {
             PageHelper.startPage(pageNum, pageSize);
-            List<Category> allResult = categoryMapper.cateVagueSearch(cateName);
+            List<Category> allResult = categoryMapper.cateVagueSearch(cateName,sortField,sortOrder,categoryList);
             PageInfo<Category> categorys = new PageInfo<>(allResult);
             categoryobj.put("totalNum", categorys.getTotal()); //总记录数目
             categoryobj.put("pages", categorys.getPages()); //总页数
@@ -140,6 +156,7 @@ public class CategoryServiceImpl implements CategoryService {
         }
         catch (Exception e)
         {
+            System.out.println(e+"cateVagueSearchcateVagueSearch");
             DataMap searchfail = DataMap.fail(CodeType.UN_EXPECTED_ERROR);
             return searchfail;
         }
@@ -148,4 +165,42 @@ public class CategoryServiceImpl implements CategoryService {
         }
     }
 
+    @Override
+    public JSONObject getCategoryNum() {
+        try{
+            JSONObject categoryObj = new JSONObject();
+            int cateNum = categoryMapper.selectCategoryNum();
+            categoryObj.put("name", "category");
+            categoryObj.put("Num", cateNum);
+            return categoryObj;
+        }
+        catch (Exception e){
+            System.out.println(e+"getCategoryNum");
+            return null;
+        }
+
+    }
+
+    @Override
+    public DataMap categoryFollowsArticle() {
+        try{
+            List<Map<String, Object>> categoryFollowMaps = categoryMapper.categoryFollowsArticle();
+            Iterator<Map<String, Object>> iterator = categoryFollowMaps.iterator();
+            while (iterator.hasNext()){
+                Map<String, Object> next  = iterator.next();
+                Long articleNum = (Long) next.get("articleNum");
+                if(articleNum==0){
+                    iterator.remove();
+                }
+            }
+            DataMap articleDataMap = DataMap.success().setData(categoryFollowMaps);
+            return articleDataMap;
+        }
+        catch (Exception e)
+        {
+            System.out.println("categoryFollowsArticle"+e);
+            DataMap getfail = DataMap.fail(CodeType.UN_EXPECTED_ERROR);
+            return getfail;
+        }
+    }
 }

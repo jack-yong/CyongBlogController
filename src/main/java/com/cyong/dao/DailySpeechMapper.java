@@ -62,4 +62,6 @@ public interface DailySpeechMapper {
      * @mbggenerated Mon Oct 25 11:12:50 CST 2021
      */
     int updateByPrimaryKey(DailySpeech record);
+
+    int selectDailySpeechNum();
 }

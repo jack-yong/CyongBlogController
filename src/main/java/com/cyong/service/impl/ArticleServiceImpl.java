@@ -8,13 +8,17 @@ import com.cyong.dao.BlogMapper;
 import com.cyong.dao.BlogTagRelationMapper;
 import com.cyong.model.Blog;
 import com.cyong.model.BlogTagRelation;
+import com.cyong.model.Tag;
 import com.cyong.service.ArticleService;
 import com.cyong.utils.DataMap;
+import com.cyong.utils.Datafilter;
+import com.cyong.utils.TimeUtil;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 /**
  * @BelongsProject: CyongBlogController
@@ -32,6 +36,12 @@ public class ArticleServiceImpl implements ArticleService {
 
     @Autowired
     private BlogTagRelationMapper blogTagRelationMapper;
+
+    @Autowired
+    private TimeUtil timeUtil;
+
+    @Autowired
+    private Datafilter datafilter;
 
     @Override
     public DataMap addArticle(String title, String content, int category, String tagList, String coverImage, int status) {
@@ -86,7 +96,134 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     @Override
-    public DataMap articleSearch(String title, String category, String tag, int pageSize, int pageNum) {
-        return null;
+    public DataMap articleSearch(String title, int category, String tagList, int pageSize, int pageNum,  String timeInterval, String sorter, String filters) {
+
+        JSONObject articleObj = new JSONObject();
+        String statusValue = "";
+        String commentStatusValue= "";
+//        List<String> STList =  new ArrayList<String>();
+        String sortField = "";
+        String sortOrder = "";
+        String startDate = null;
+        String endDate = null;
+        if(!filters.isEmpty()){
+            JSONObject filtersObj = JSONObject.parseObject(filters);
+            if(filtersObj.containsKey("status")){
+                String articleStatus = (String)filtersObj.get("status");
+                String[] AStatusList = articleStatus.split(",");
+                if(AStatusList.length ==1){
+                    statusValue =  AStatusList[0];
+                }
+            }
+            if(filtersObj.containsKey("enablecomment")){
+                String commentStatus = (String)filtersObj.get("enablecomment");
+                String[] CStatusList = commentStatus.split(",");
+                if(CStatusList.length ==1){
+                    commentStatusValue =  CStatusList[0];
+                }
+            }
+        }
+//        if(!tagList.equals("")){
+//            String[] selectTList = tagList.split(",");
+//            for (String item : selectTList) {
+//                JSONObject jsonObject = JSON.parseObject(item);
+//                if(!jsonObject.isEmpty())
+//                {
+//                    String key =  (String)jsonObject.get("key");
+//                    STList.add(key);
+//                }
+//            }
+//            if(STList.size()==0){
+//                STList = null;
+//            }
+//        }
+        if(!sorter.equals("")){
+            String[] sorterlist = sorter.split("&&");
+            sortField = sorterlist[0];
+            sortOrder = sorterlist[1];
+        }
+        if(!timeInterval.equals("")){
+            System.out.println(timeInterval+"timeInterval");
+            String[] timeList = timeInterval.split("&&");
+            System.out.println(timeList[0]+"timeList1"+timeList[1]+"timeList2");
+            startDate = timeList[0];
+            endDate = timeList[1];
+        }
+        try {
+            PageHelper.startPage(pageNum, pageSize);
+            List<Map<String, Object>> articleResult = blogMapper.articleVagueSearch(title, category, statusValue, commentStatusValue, startDate, endDate, sortField, sortOrder);
+            PageInfo<Map<String, Object>> articles = new PageInfo<>(articleResult);
+            articleObj.put("totalNum", articles.getTotal()); //总记录数目
+            articleObj.put("pages", articles.getPages()); //总页数
+            articleObj.put("pageNum", articles.getPageNum()); //当前页
+            articleObj.put("pagesSize", articles.getSize()); //每页的数量
+            Iterator<Map<String, Object>> iterator = articleResult.iterator();
+            if(!tagList.equals("")){
+                 while (iterator.hasNext()){
+                     Map<String, Object> next  = iterator.next();
+                     List<Tag> rTagList = (List<Tag>)next.get("blogTagsList");
+                     boolean tagPos = false;
+                     for(int i = 0;i<rTagList.size();i++){
+//                         System.out.println(rTagList.get(i).getTagName()+":"+rTagList.get(i).getTagName().indexOf(tagList)+":"+tagList);
+                         if(tagList.indexOf(rTagList.get(i).getTagName())!=-1)
+                         {
+                             tagPos= true;
+                             break;
+                         }
+                     }
+                     if(!tagPos)
+                     {
+                         iterator.remove();
+                     }
+                 }
+            }
+            articleObj.put("data", datafilter.Articlefilter(articleResult));
+            DataMap objectDataMap = DataMap.success().setData(articleObj);
+            return objectDataMap;
+        }
+        catch (Exception e)
+        {
+            System.out.println(e+"articleSearchcateVagueSearch");
+            DataMap searchfail = DataMap.fail(CodeType.UN_EXPECTED_ERROR);
+            return searchfail;
+        }
+        finally {
+            PageHelper.clearPage();
+        }
+
+
+
     }
+
+    @Override
+    public JSONObject getArticleNum() {
+        try{
+            JSONObject articleObj = new JSONObject();
+            int bNum = blogMapper.selectBlogNum();
+            articleObj.put("name","article");
+            articleObj.put("Num",bNum);
+            return articleObj;
+        }
+        catch (Exception e){
+            System.out.println(e+"getArticleNum");
+            return null;
+        }
+
+    }
+
+    @Override
+    public DataMap articleCanlder(String year) {
+        try{
+            List<Map<String, Object>> canlderMaps = blogMapper.calendarArticle(year);
+            DataMap canlderMap = DataMap.success().setData(canlderMaps);
+            return canlderMap;
+        }
+        catch (Exception e)
+        {
+            DataMap canlderFail = DataMap.fail(CodeType.UN_EXPECTED_ERROR);
+            return canlderFail;
+        }
+    }
+
+
 }

@@ -166,4 +166,8 @@
       link_create_time = #{linkCreateTime,jdbcType=TIMESTAMP}
     where link_id = #{linkId,jdbcType=INTEGER}
   </update>
+  <select id="selectLinkNum" resultType="int">
+    select count(1)
+    from tb_link
+  </select>
 </mapper>

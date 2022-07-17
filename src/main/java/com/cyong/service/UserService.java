@@ -1,5 +1,6 @@
 package com.cyong.service;
 
+import com.alibaba.fastjson.JSONObject;
 import com.cyong.model.User;
 import com.cyong.utils.DataMap;
 import org.springframework.transaction.annotation.Transactional;
@@ -112,7 +113,10 @@ public interface UserService {
 
     DataMap userLoginVerify(String username,String password);
 
-    DataMap userVagueSearch(String userName,int pageSize,int pageNum);
+    DataMap userVagueSearch(String userName,int pageSize,int pageNum,String sorter,String filters);
+
+
+    JSONObject getUserNum();
 
 
 }

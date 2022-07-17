@@ -207,7 +207,37 @@
     select
     <include refid="Base_Column_List" />
     from tb_user
-    where user_nickname like concat('%',#{username,jdbcType=VARCHAR},'%')
+    <where>
+
+      <foreach item="item" index="index" collection="userRole"
+               open="user_role in (" separator="," close=")" >
+        #{item}
+      </foreach>
+      <if test="username!=''">
+        and user_nickname like concat('%',#{username,jdbcType=VARCHAR},'%')
+      </if>
+    </where>
+    <if test="sortField != ''">
+      <if test="sortField == 'recentlandtime' and sortOrder == 'ascend'">
+        order by user_recentlyLanded ASC
+      </if>
+      <if test="sortField == 'recentlandtime' and sortOrder == 'descend'">
+        order by user_recentlyLanded DESC
+      </if>
+      <if test="sortField == 'username' and sortOrder == 'ascend'">
+        order by user_nickname ASC
+      </if>
+      <if test="sortField == 'username' and sortOrder == 'descend'">
+        order by user_nickname DESC
+      </if>
+    </if>
+
+  </select>
+
+
+  <select id="countAllUser" resultType="int">
+    select count(1)
+    from tb_user
   </select>
 
 </mapper>

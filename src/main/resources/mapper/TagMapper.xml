@@ -13,6 +13,12 @@
     <result column="tag_create_time" property="tagCreateTime" jdbcType="TIMESTAMP" />
     <result column="tag_color" property="tagColor" jdbcType="VARCHAR" />
   </resultMap>
+
+  <resultMap id="tagFollowArticleMap" type="java.util.Map" >
+    <id column="tag_id" property="tagId" jdbcType="INTEGER" />
+    <result column="tag_name" property="tagName" jdbcType="VARCHAR" />
+    <result column="articleNum" property="articleNum" jdbcType="VARCHAR" />
+  </resultMap>
   <sql id="Base_Column_List" >
     <!--
       WARNING - @mbggenerated
@@ -125,6 +131,48 @@
     select
     <include refid="Base_Column_List" />
     from tb_tag
-    where tag_name like concat('%',#{tagName,jdbcType=VARCHAR},'%')
+    <where>
+
+      <foreach item="item" index="index" collection="tagStatus"
+               open="tag_is_deleted in (" separator="," close=")" >
+          #{item}
+      </foreach>
+      <if test="tagName!=''">
+        and tag_name like concat('%',#{tagName,jdbcType=VARCHAR},'%')
+      </if>
+
+    </where>
+    <if test="sortField != ''">
+      <if test="sortField == 'createTime' and sortOrder == 'ascend'">
+        order by tag_create_time ASC
+      </if>
+      <if test="sortField == 'createTime' and sortOrder == 'descend'">
+        order by tag_create_time DESC
+      </if>
+      <if test="sortField == 'tagname' and sortOrder == 'ascend'">
+        order by tag_name ASC
+      </if>
+      <if test="sortField == 'tagname' and sortOrder == 'descend'">
+        order by tag_name DESC
+      </if>
+    </if>
+
+
   </select>
+
+  <select id="selectTagNum" resultType="int">
+    select  count(1)
+    from tb_tag
+  </select>
+
+  <select id="tagFollowsArticle" resultMap="tagFollowArticleMap">
+    select
+    tag_id, tag_name,
+    count(btrelation_blog_id) as articleNum
+    from  tb_tag t
+    left outer join tb_blog_tag_relation trb on t.tag_id = trb.btrelation_tag_id
+    group by tag_name
+  </select>
+
+
 </mapper>

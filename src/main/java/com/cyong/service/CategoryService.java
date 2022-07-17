@@ -1,5 +1,6 @@
 package com.cyong.service;
 
+import com.alibaba.fastjson.JSONObject;
 import com.cyong.dao.CategoryMapper;
 import com.cyong.utils.DataMap;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,9 +22,11 @@ public interface CategoryService {
 
     DataMap searchAllCategory();
 
-    DataMap cateVagueSearch(String cateName,int pageSize,int pageNum);
+    DataMap cateVagueSearch(String cateName,int pageSize,int pageNum,String sorter,String filters);
 
+    JSONObject getCategoryNum();
 
+    DataMap categoryFollowsArticle();
 
 
 

@@ -173,4 +173,9 @@
       lmr_is_read = #{lmrIsRead,jdbcType=TINYINT}
     where lmr_id = #{lmrId,jdbcType=INTEGER}
   </update>
+
+  <select id="selectMessageNum" resultType="int">
+    select count(1)
+    from tb_leave_message_record
+  </select>
 </mapper>

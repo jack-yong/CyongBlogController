@@ -14,6 +14,12 @@
     <result column="category_is_deleted" property="categoryIsDeleted" jdbcType="TINYINT" />
     <result column="category_create_time" property="categoryCreateTime"  jdbcType="TIMESTAMP" />
   </resultMap>
+
+  <resultMap id="categoryFollowsArticleMap" type="java.util.Map" >
+    <id column="category_id" property="categoryId" jdbcType="INTEGER" />
+    <result column="category_name" property="categoryName" jdbcType="VARCHAR" />
+    <result column="articleNum" property="articleNum" jdbcType="VARCHAR" />
+  </resultMap>
   <sql id="Base_Column_List" >
     <!--
       WARNING - @mbggenerated
@@ -162,6 +168,42 @@
     select
     <include refid="Base_Column_List" />
     from tb_category
-    where category_name like concat('%',#{cateName,jdbcType=VARCHAR},'%')
+    <where>
+      <foreach item="item" index="index" collection="cateStatus"
+               open="category_is_deleted in (" separator="," close=")" >
+        #{item}
+      </foreach>
+      <if test="cateName!=''">
+        and category_name like concat('%',#{cateName,jdbcType=VARCHAR},'%')
+      </if>
+    </where>
+    <if test="sortField != ''">
+      <if test="sortField == 'createtime' and sortOrder == 'ascend'">
+        order by category_create_time ASC
+      </if>
+      <if test="sortField == 'createtime' and sortOrder == 'descend'">
+        order by category_create_time DESC
+      </if>
+      <if test="sortField == 'catename' and sortOrder == 'ascend'">
+        order by category_name ASC
+      </if>
+      <if test="sortField == 'catename' and sortOrder == 'descend'">
+        order by category_name DESC
+      </if>
+    </if>
+  </select>
+  <select id="selectCategoryNum" resultType="int">
+    select count(1)
+    from tb_category
+  </select>
+
+  <select id="categoryFollowsArticle" resultMap="categoryFollowsArticleMap">
+    select
+    category_id, category_name,
+    count(blog_id) as articleNum
+    from tb_category  cate
+    left outer join tb_blog b on cate.category_id = b.blog_category_id
+    group by category_id
+
   </select>
 </mapper>

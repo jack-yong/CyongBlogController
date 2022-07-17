@@ -4,6 +4,10 @@ import com.cyong.model.Blog;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
+
 @Mapper
 @Repository
 public interface BlogMapper {
@@ -62,4 +66,10 @@ public interface BlogMapper {
      * @mbggenerated Mon Oct 25 11:12:50 CST 2021
      */
     int updateByPrimaryKey(Blog record);
+
+    int selectBlogNum();
+
+    List<Map<String,Object>> articleVagueSearch(String title, int categoryId,String status, String commentStatus, String startDate, String endDate, String sortField, String sortOrder);
+
+    List<Map<String,Object>> calendarArticle(String year);
 }

@@ -42,11 +42,31 @@ public class ArticleController {
             DataMap dataMap = articleService.addArticle(title, content, category,tagList,coverImage,numstatus);
             return  JsonResult.build(dataMap).toJSON();
 
-
         }catch (Exception e)
         {
             log.error("add article happened exception", e);
         }
         return JsonResult.fail(CodeType.SERVER_EXCEPTION).toJSON();
     }
+
+    @RequestMapping("/article/search")
+    @ResponseBody
+    String articleSearch(@RequestParam(name ="title",defaultValue = "") String title,
+                         @RequestParam(name ="categoryid",defaultValue = "-1") int categoryId,
+                         @RequestParam(name = "tags",defaultValue = "") String tagList,
+                         @RequestParam(name ="timeinterval",defaultValue = "") String timeInterval,
+                         @RequestParam(name ="sorter",defaultValue = "") String sorter,
+                         @RequestParam(name ="filters",defaultValue = "") String filters,
+                         @RequestParam(name ="pageSize",defaultValue = "10") int pageSize,
+                         @RequestParam(name ="page",defaultValue = "1") int pageNow){
+        try{
+            DataMap dataMap = articleService.articleSearch(title,categoryId,tagList,pageSize,pageNow,timeInterval,sorter,filters);
+            return JsonResult.build(dataMap).toJSON();
+        }catch (Exception e){
+            log.error("search article  happened exception", e);
+        }
+        return JsonResult.fail(CodeType.SERVER_EXCEPTION).toJSON();
+    }
+
+
 }

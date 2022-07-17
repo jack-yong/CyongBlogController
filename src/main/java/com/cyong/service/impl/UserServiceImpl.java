@@ -13,7 +13,7 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -116,7 +116,7 @@ public class UserServiceImpl  implements UserService {
 
     @Override
     public int countUserNum() {
-        return 0;
+        return userMapper.countAllUser();
     }
 
     @Override
@@ -139,11 +139,28 @@ public class UserServiceImpl  implements UserService {
     }
 
     @Override
-    public DataMap userVagueSearch(String userName, int pageSize, int pageNum) {
+    public DataMap userVagueSearch(String userName, int pageSize, int pageNum,String sorter,String filters) {
         JSONObject userobi = new JSONObject();
+        List<String> roleList= new ArrayList<String>();
+        String sortField = "";
+        String sortOrder = "";
+        if(!filters.equals("{}")){
+            JSONObject filtersObj = JSONObject.parseObject(filters);
+            String role = (String)filtersObj.get("role");
+            String[] userRoleSL = role.split(",");
+//            System.out.println(sorter+"sortersortersorter");
+            for (String roleItem : userRoleSL) {
+                roleList.add(roleItem);
+            }
+        }
+        if(!sorter.equals("")){
+            String[] sorterlist = sorter.split("&&");
+            sortField = sorterlist[0];
+            sortOrder = sorterlist[1];
+        }
         try{
             PageHelper.startPage(pageNum,pageSize);
-            List<User> userResults = userMapper.vagueSearchByUserName(userName);
+            List<User> userResults = userMapper.vagueSearchByUserName(userName,sortField,sortOrder,roleList);
             PageInfo<User> users = new PageInfo<>(userResults);
             userobi.put("totalNum",users.getTotal());
             userobi.put("pages",users.getPages());
@@ -159,7 +176,25 @@ public class UserServiceImpl  implements UserService {
             return searchfail;
         }
         finally {
+
             PageHelper.clearPage();
         }
+    }
+
+    @Override
+    public JSONObject getUserNum() {
+
+        try{
+            JSONObject userObj = new JSONObject();
+            int userNum = userMapper.countAllUser();
+            userObj.put("name","user");
+            userObj.put("Num",userNum);
+            return userObj;
+        }
+        catch (Exception e){
+            System.out.println(e+"getUserNum");
+            return null;
+        }
+
     }
 }

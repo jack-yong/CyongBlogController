@@ -5,6 +5,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Map;
 
 @Mapper
 @Repository
@@ -61,6 +62,10 @@ public interface CategoryMapper {
 
     List<Category> searchAllCategory();
 
-    List<Category> cateVagueSearch(String cateName);
+    List<Category> cateVagueSearch(String cateName,String sortField,String sortOrder,List<String> cateStatus);
+
+    int selectCategoryNum();
+
+    List<Map<String,Object>> categoryFollowsArticle();
 
 }

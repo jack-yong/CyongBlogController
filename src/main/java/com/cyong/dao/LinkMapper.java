@@ -54,4 +54,7 @@ public interface LinkMapper {
      * @mbggenerated Mon Oct 25 11:12:50 CST 2021
      */
     int updateByPrimaryKey(Link record);
+
+
+    int selectLinkNum();
 }

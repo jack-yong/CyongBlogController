@@ -4,6 +4,9 @@ import com.cyong.model.Comment;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+import java.util.Map;
+
 @Mapper
 @Repository
 public interface CommentMapper {
@@ -54,4 +57,6 @@ public interface CommentMapper {
      * @mbggenerated Mon Oct 25 11:12:50 CST 2021
      */
     int updateByPrimaryKey(Comment record);
+
+    int selectCommentNum();
 }

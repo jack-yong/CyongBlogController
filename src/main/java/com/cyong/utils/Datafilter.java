@@ -9,7 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import com.cyong.utils.TimeUtil;
 
+import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @BelongsProject: CyongBlogController
@@ -68,5 +70,42 @@ public class Datafilter {
             tagList.add(itemobject);
         }
         return tagList;
+    }
+
+    public JSONArray Articlefilter( List<Map<String, Object>> Articles){
+        JSONArray articleList = new JSONArray();
+        for(Map<String, Object> item:Articles){
+            JSONObject itemobject = new JSONObject();
+            try{
+                if(item.containsKey("blogSubUrl"))
+                {
+                    itemobject.put("suburl",item.get("blogSubUrl"));
+                }
+                if(item.containsKey("blogStatus"))
+                {
+                    itemobject.put("status",item.get("blogStatus"));
+                }
+                if(item.containsKey("blogContent"))
+                {
+                    itemobject.put("blogContent",item.get("blogContent"));
+                }
+
+                itemobject.put("id",item.get("blogId"));
+                itemobject.put("title",item.get("blogTitle"));
+                itemobject.put("coverimage",item.get("blogCoverImage"));
+                itemobject.put("category",item.get("category"));
+                itemobject.put("tags",item.get("blogTagsList"));
+                itemobject.put("views",item.get("blogViews"));
+                itemobject.put("likes",item.get("blogLikes"));
+                itemobject.put("enablecomment",item.get("blogEnableComment"));
+                itemobject.put("createtime",timeUtil.getParseDateForSix((Date) item.get("blogCreateTime")));
+                itemobject.put("updatetime",timeUtil.getParseDateForSix((Date) item.get("blogUpdateTime")));
+                articleList.add(itemobject);
+            }catch (Exception e){
+                System.out.println("Articlefilter"+e);
+            }
+
+        }
+        return articleList;
     }
 }

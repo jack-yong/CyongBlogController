@@ -6,6 +6,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Map;
 
 @Mapper
 @Repository
@@ -58,5 +59,11 @@ public interface TagMapper {
      */
     int updateByPrimaryKey(Tag record);
 
-    List<Tag> vagueSearchByTagName(String tagName);
+    List<Tag> vagueSearchByTagName(String tagName,String sortField,String sortOrder,List<String> tagStatus);
+
+    int selectTagNum();
+
+    List<Map<String,Object>> tagFollowsArticle();
+
+
 }

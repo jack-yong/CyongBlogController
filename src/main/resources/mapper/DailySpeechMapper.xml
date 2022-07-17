@@ -147,4 +147,9 @@
       dspeech_publishDate = #{dspeechPublishdate,jdbcType=TIMESTAMP}
     where dspeech_id = #{dspeechId,jdbcType=INTEGER}
   </update>
+
+  <select id="selectDailySpeechNum" resultType="int">
+    select count(1)
+    from tb_daily_speech
+  </select>
 </mapper>

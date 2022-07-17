@@ -62,4 +62,7 @@ public interface LeaveMessageRecordMapper {
      * @mbggenerated Mon Oct 25 11:12:50 CST 2021
      */
     int updateByPrimaryKey(LeaveMessageRecord record);
+
+
+    int selectMessageNum();
 }

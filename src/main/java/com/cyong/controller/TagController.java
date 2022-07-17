@@ -28,16 +28,19 @@ public class TagController {
     @RequestMapping("/tag/vaguesearch")
     @ResponseBody
     public String tagVagueSearch(@RequestParam(name ="tagName",defaultValue = "") String tagName,
-                              @RequestParam(name ="pageSize",defaultValue = "10") int pageSize,
-                              @RequestParam(name ="page",defaultValue = "1") int pageNow)
+                                 @RequestParam(name ="sorter",defaultValue = "") String sorter,
+                                 @RequestParam(name ="filters",defaultValue = "") String filters,
+                                 @RequestParam(name ="pageSize",defaultValue = "10") int pageSize,
+                                 @RequestParam(name ="page",defaultValue = "1") int pageNow)
     {
         try{
-//            System.out.println(searchname+pageSize);
-            DataMap dataMap = tagService.tagVagueSearch(tagName, pageSize, pageNow);
+//            System.out.println(tagName+sorter+filters+pageSize+pageNow);
+            DataMap dataMap = tagService.tagVagueSearch(tagName, pageSize, pageNow,sorter,filters);
             return JsonResult.build(dataMap).toJSON();
         }
         catch (Exception e)
         {
+            System.out.println(e+"eee");
             log.error("tag vaguesearch get an  exception", e);
         }
         return JsonResult.fail(CodeType.SERVER_EXCEPTION).toJSON();

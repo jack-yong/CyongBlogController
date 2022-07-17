@@ -28,10 +28,12 @@ public class CategoryController {
     @ResponseBody
     public String categorysearch(@RequestParam(name ="cateName",defaultValue = "") String cateName,
                                  @RequestParam(name ="pageSize",defaultValue = "10") int pageSize,
+                                 @RequestParam(name ="sorter",defaultValue = "") String sorter,
+                                 @RequestParam(name ="filters",defaultValue = "") String filters,
                                  @RequestParam(name ="page",defaultValue = "1") int pageNow)
     {
         try{
-            DataMap dataMap = categoryService.cateVagueSearch(cateName,pageSize,pageNow);
+            DataMap dataMap = categoryService.cateVagueSearch(cateName,pageSize,pageNow,sorter,filters);
             return JsonResult.build(dataMap).toJSON();
         }catch (Exception e){
             log.error("search category by name happened exception", e);

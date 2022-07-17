@@ -80,7 +80,9 @@ public interface UserMapper {
     User findUserByUsername(String username);
 
 
-    List<User> vagueSearchByUserName(String username);
+    List<User> vagueSearchByUserName(String username,String sortField,String sortOrder,List<String> userRole);
+
+    int countAllUser();
 
 
 

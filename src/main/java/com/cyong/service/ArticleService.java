@@ -1,8 +1,10 @@
 package com.cyong.service;
 
+import com.alibaba.fastjson.JSONObject;
 import com.cyong.utils.DataMap;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 /**
  * @BelongsProject: CyongBlogController
@@ -15,5 +17,12 @@ public interface ArticleService {
 
     DataMap addArticle(String title, String content, int category, String tagList,String coverImage,int status);
 
-    DataMap articleSearch(String title,String category,String tag,int pageSize,int pageNum);
+    DataMap articleSearch(String title, int category, String tagList, int pageSize, int pageNum, String timeInterval,String sorter,String filters);
+
+    JSONObject getArticleNum();
+
+    DataMap articleCanlder(String year);
+
+
+
 }

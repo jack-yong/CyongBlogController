@@ -28,12 +28,14 @@ public class UserController {
     @RequestMapping("/user/vaguesearch")
     @ResponseBody
     public String vagueSearch(@RequestParam(name ="searchName",defaultValue = "") String searchname,
-                       @RequestParam(name ="pageSize",defaultValue = "10") int pageSize,
-                       @RequestParam(name ="page",defaultValue = "1") int pageNow)
+                              @RequestParam(name ="sorter",defaultValue = "") String sorter,
+                              @RequestParam(name ="filters",defaultValue = "") String filters,
+                              @RequestParam(name ="pageSize",defaultValue = "10") int pageSize,
+                              @RequestParam(name ="page",defaultValue = "1") int pageNow)
     {
         try{
 //            System.out.println(searchname+pageSize);
-            DataMap dataMap = userService.userVagueSearch(searchname, pageSize, pageNow);
+            DataMap dataMap = userService.userVagueSearch(searchname, pageSize, pageNow,sorter,filters);
             return JsonResult.build(dataMap).toJSON();
         }
         catch (Exception e)

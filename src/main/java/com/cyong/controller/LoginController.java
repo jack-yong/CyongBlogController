@@ -25,7 +25,7 @@ import org.springframework.web.bind.annotation.*;
 @Slf4j
 public class LoginController {
     @Autowired
-    UserService userService;
+    private UserService userService;
     @Autowired
     private GithubProvider githubProvider;
 

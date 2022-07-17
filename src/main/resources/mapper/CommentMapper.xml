@@ -179,4 +179,9 @@
       is_deleted = #{isDeleted,jdbcType=TINYINT}
     where comment_id = #{commentId,jdbcType=BIGINT}
   </update>
+
+  <select id="selectCommentNum" resultType="int">
+    select  count(1)
+    from tb_comment
+  </select>
 </mapper>
