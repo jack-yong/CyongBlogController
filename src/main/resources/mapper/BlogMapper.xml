@@ -38,6 +38,10 @@
     <collection property="blogTagsList" ofType="com.cyong.model.Tag" javaType="list" column="id=blog_id" select="selectTags" />
   </resultMap>
 
+  <resultMap id="BlogDetailWithContent" type="java.util.Map" extends="BlogDetail">
+    <result property="blogContent" column="blog_content"/>
+  </resultMap>
+
   <resultMap id="TagsMap" type="com.cyong.model.Tag" >
     <!--
       WARNING - @mbggenerated
@@ -378,5 +382,17 @@
     from tb_blog
     where  YEAR(blog_create_time) =#{year}
     group by DAY(blog_create_time)
+  </select>
+
+  <select id="getArticlePostShow" resultMap="BlogDetailWithContent">
+    select
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    ,
+    <include refid="selectCategory"/>
+    from tb_blog b
+    left outer join tb_category c on b.blog_category_id = c.category_id
+    order by blog_update_time DESC
   </select>
 </mapper>

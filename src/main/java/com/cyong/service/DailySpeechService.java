@@ -14,4 +14,8 @@ public interface DailySpeechService {
     DataMap searchByDSId(int DSId);
 
     JSONObject getDSCount();
+
+    DataMap vagueSearchByDSContent(String dsContent,int pageNum,int pageSize,String sorter);
+
+    DataMap dsAdd(String dsContent,String dsImage);
 }

@@ -14,4 +14,8 @@ public interface DevLogService {
     DataMap searchByDLId(int DLId);
 
     JSONObject getDLCount();
+
+    DataMap vagueSearchDevlog(String searchkey,int pageSize, int pageNum,String sorter,String filters);
+
+    DataMap addDevlog(String devLogTitle,String devLogContent,int devlogKind);
 }

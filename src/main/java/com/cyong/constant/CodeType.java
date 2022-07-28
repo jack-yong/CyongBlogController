@@ -49,6 +49,15 @@ public enum CodeType {
     FRIEND_LINK_EXIST(602, "友链已存在"),
     UPDATE_FRIEND_LINK_SUCCESS(603, "更新友链成功"),
     DELETE_FRIEND_LINK_SUCCESS(604, "删除友链成功"),
+
+    DAILYSPEECH_CONTENT_BLANK(701,"说说内容为空"),
+
+    LINK_NAME_BLANK(801,"链接名称为空"),
+    LINK_CONTENT_BLANK(802,"链接内容为空"),
+    LINK_URL_BLANK(803,"链接地址为空"),
+
+    DEVLOG_TITLE_BLANK(901,"日志标题为空"),
+    DEVLOG_CONTENT_BLANK(902,"日志内容为空"),
     ;
 
     private int code;

@@ -171,6 +171,7 @@ public class CategoryServiceImpl implements CategoryService {
             JSONObject categoryObj = new JSONObject();
             int cateNum = categoryMapper.selectCategoryNum();
             categoryObj.put("name", "category");
+            categoryObj.put("title", "类别");
             categoryObj.put("Num", cateNum);
             return categoryObj;
         }

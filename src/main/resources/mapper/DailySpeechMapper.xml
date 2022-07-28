@@ -152,4 +152,32 @@
     select count(1)
     from tb_daily_speech
   </select>
+  <select id="vagueSearchDS" resultMap="ResultMapWithBLOBs">
+    select
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List"/>
+    from tb_daily_speech
+  <where>
+    <if test="dsKey!=''">
+      and dspeech_content like concat('%',#{dsKey,jdbcType=VARCHAR},'%')
+    </if>
+  </where>
+  <if test="sortField != ''">
+    <if test="sortField == 'pushcontent' and sortOrder == 'ascend'">
+      order by dspeech_content ASC
+    </if>
+    <if test="sortField == 'pushcontent' and sortOrder == 'descend'">
+      order by dspeech_content DESC
+    </if>
+    <if test="sortField == 'pushtime' and sortOrder == 'ascend'">
+      order by dspeech_publishDate ASC
+    </if>
+    <if test="sortField == 'pushtime' and sortOrder == 'descend'">
+      order by dspeech_publishDate DESC
+    </if>
+  </if>
+
+  </select>
+
 </mapper>

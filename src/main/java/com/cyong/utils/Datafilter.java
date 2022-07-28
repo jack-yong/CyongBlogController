@@ -2,9 +2,9 @@ package com.cyong.utils;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.cyong.model.Category;
-import com.cyong.model.Tag;
-import com.cyong.model.User;
+import com.cyong.model.*;
+import com.vdurmont.emoji.EmojiParser;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import com.cyong.utils.TimeUtil;
@@ -21,6 +21,7 @@ import java.util.Map;
  * @Description: 数据过滤类
  */
 @Component
+@Slf4j
 public class Datafilter {
 
     @Autowired
@@ -89,6 +90,10 @@ public class Datafilter {
                 {
                     itemobject.put("blogContent",item.get("blogContent"));
                 }
+                if(item.containsKey("blogUpdateTime"))
+                {
+                    itemobject.put("updatetime",timeUtil.getParseDateForSix((Date) item.get("blogUpdateTime")));
+                }
 
                 itemobject.put("id",item.get("blogId"));
                 itemobject.put("title",item.get("blogTitle"));
@@ -99,7 +104,8 @@ public class Datafilter {
                 itemobject.put("likes",item.get("blogLikes"));
                 itemobject.put("enablecomment",item.get("blogEnableComment"));
                 itemobject.put("createtime",timeUtil.getParseDateForSix((Date) item.get("blogCreateTime")));
-                itemobject.put("updatetime",timeUtil.getParseDateForSix((Date) item.get("blogUpdateTime")));
+
+
                 articleList.add(itemobject);
             }catch (Exception e){
                 System.out.println("Articlefilter"+e);
@@ -107,5 +113,73 @@ public class Datafilter {
 
         }
         return articleList;
+    }
+
+    public JSONArray Pushpinsfilter(List<DailySpeech> dailySpeeches)
+    {
+        try
+        {
+            JSONArray pushpinsList = new JSONArray();
+            for (DailySpeech dailySpeech : dailySpeeches) {
+                JSONObject itemObj = new JSONObject();
+                itemObj.put("id", dailySpeech.getDspeechId());
+                itemObj.put("pushimg", dailySpeech.getDspeechPicsurl());
+                itemObj.put("pushcontent", EmojiParser.parseToUnicode(dailySpeech.getDspeechContent()));
+                itemObj.put("pushtime", timeUtil.getParseDateForSix(dailySpeech.getDspeechPublishdate()));
+                pushpinsList.add(itemObj);
+            }
+            return pushpinsList;
+        }
+        catch (Exception e)
+        {
+            JSONArray fail = new JSONArray();
+            log.error("Pushpinsfilter error",e);
+            return fail;
+        }
+    }
+
+    public JSONArray LinkFilter(List<Link> linkList)
+    {
+        try {
+            JSONArray linkArr = new JSONArray();
+            for (Link link : linkList) {
+                JSONObject itemObj = new JSONObject();
+                itemObj.put("id",link.getLinkId());
+                itemObj.put("linkimg",link.getLinkAvater());
+                itemObj.put("linktype",link.getLinkType());
+                itemObj.put("linktitle",link.getLinkName());
+                itemObj.put("linkurl",link.getLinkUrl());
+                itemObj.put("linkdesc",link.getLinkDescription());
+                itemObj.put("linkCreateTime",timeUtil.getParseDateForSix(link.getLinkCreateTime()));
+                linkArr.add(itemObj);
+            }
+            return linkArr;
+        }
+        catch (Exception e)
+        {
+            log.error("utils: Datafilter","func:LinkFilter",e);
+            return new JSONArray();
+        }
+    }
+
+    public JSONArray DevlogFilter(List<DevLog> devLogList){
+        try{
+            JSONArray   DLArr = new JSONArray();
+            for (DevLog item : devLogList) {
+                JSONObject itemObj = new JSONObject();
+                itemObj.put("id",item.getDevLogId());
+                itemObj.put("devlogtitle",item.getDevLogTitle());
+                itemObj.put("devlogcontent",EmojiParser.parseToUnicode(item.getDevLogContent()));
+                itemObj.put("devlogtype",item.getDevLogType());
+                itemObj.put("devlogCreateTime",timeUtil.getParseDateForSix(item.getDevLogCreateTime()));
+                DLArr.add(itemObj);
+            }
+            return DLArr;
+        }
+        catch (Exception e)
+        {
+            log.error("utils: Datafilter","func:DevlogFilter",e);
+            return new JSONArray();
+        }
     }
 }

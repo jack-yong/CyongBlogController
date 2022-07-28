@@ -15,6 +15,7 @@
     <result column="link_rank" property="linkRank" jdbcType="INTEGER" />
     <result column="link_is_deleted" property="linkIsDeleted" jdbcType="TINYINT" />
     <result column="link_create_time" property="linkCreateTime" jdbcType="TIMESTAMP" />
+    <result column="link_avater" property="linkAvater" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
     <!--
@@ -23,7 +24,7 @@
       This element was generated on Mon Oct 25 11:12:50 CST 2021.
     -->
     link_id, link_type, link_name, link_url, link_description, link_rank, link_is_deleted, 
-    link_create_time
+    link_create_time,link_avater
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     <!--
@@ -53,10 +54,10 @@
     -->
     insert into tb_link (link_id, link_type, link_name, 
       link_url, link_description, link_rank, 
-      link_is_deleted, link_create_time)
+      link_is_deleted, link_create_time,link_url,link_avater)
     values (#{linkId,jdbcType=INTEGER}, #{linkType,jdbcType=TINYINT}, #{linkName,jdbcType=VARCHAR}, 
       #{linkUrl,jdbcType=VARCHAR}, #{linkDescription,jdbcType=VARCHAR}, #{linkRank,jdbcType=INTEGER}, 
-      #{linkIsDeleted,jdbcType=TINYINT}, #{linkCreateTime,jdbcType=TIMESTAMP})
+      #{linkIsDeleted,jdbcType=TINYINT}, #{linkCreateTime,jdbcType=TIMESTAMP}, #{linkAvater,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.cyong.model.Link" >
     <!--
@@ -90,6 +91,9 @@
       <if test="linkCreateTime != null" >
         link_create_time,
       </if>
+      <if test="linkAvater != null" >
+        link_avater,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="linkId != null" >
@@ -115,6 +119,9 @@
       </if>
       <if test="linkCreateTime != null" >
         #{linkCreateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="linkAvater != null" >
+        #{linkAvater,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -169,5 +176,37 @@
   <select id="selectLinkNum" resultType="int">
     select count(1)
     from tb_link
+  </select>
+
+  <select id="vagueSearchLink" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from tb_link
+    <where>
+      <if test="linkKinds!=null">
+        <foreach collection="linkKinds" item="item" index="index"
+                 open="link_type in (" separator="," close=")">
+          #{item}
+        </foreach>
+      </if>
+      <if test="searchKey!=''">
+        and link_name like concat('%',#{searchKey,jdbcType=VARCHAR},'%')
+        or link_description like concat('%',#{searchKey,jdbcType=VARCHAR},'%')
+      </if>
+    </where>
+    <if test="sortField != ''">
+      <if test="sortField == 'linktitle' and sortOrder == 'ascend'">
+        order by link_name ASC
+      </if>
+      <if test="sortField == 'linktitle' and sortOrder == 'descend'">
+        order by link_name DESC
+      </if>
+      <if test="sortField == 'linkCreateTime' and sortOrder == 'ascend'">
+        order by link_create_time ASC
+      </if>
+      <if test="sortField == 'linkCreateTime' and sortOrder == 'descend'">
+        order by link_create_time DESC
+      </if>
+    </if>
   </select>
 </mapper>

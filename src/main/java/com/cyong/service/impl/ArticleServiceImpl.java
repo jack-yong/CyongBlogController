@@ -70,6 +70,7 @@ public class ArticleServiceImpl implements ArticleService {
             blog.setBlogViews(0l);
             blog.setBlogStatus((byte)status);
             blog.setBlogCategoryId(category);
+            blog.setBlogUpdateTime(date);
             try{
                 List<String> taglist = JSONArray.parseArray(prasetagList.toJSONString(), String.class);
                 blogMapper.insert(blog);
@@ -101,7 +102,6 @@ public class ArticleServiceImpl implements ArticleService {
         JSONObject articleObj = new JSONObject();
         String statusValue = "";
         String commentStatusValue= "";
-//        List<String> STList =  new ArrayList<String>();
         String sortField = "";
         String sortOrder = "";
         String startDate = null;
@@ -153,10 +153,6 @@ public class ArticleServiceImpl implements ArticleService {
             PageHelper.startPage(pageNum, pageSize);
             List<Map<String, Object>> articleResult = blogMapper.articleVagueSearch(title, category, statusValue, commentStatusValue, startDate, endDate, sortField, sortOrder);
             PageInfo<Map<String, Object>> articles = new PageInfo<>(articleResult);
-            articleObj.put("totalNum", articles.getTotal()); //总记录数目
-            articleObj.put("pages", articles.getPages()); //总页数
-            articleObj.put("pageNum", articles.getPageNum()); //当前页
-            articleObj.put("pagesSize", articles.getSize()); //每页的数量
             Iterator<Map<String, Object>> iterator = articleResult.iterator();
             if(!tagList.equals("")){
                  while (iterator.hasNext()){
@@ -177,6 +173,10 @@ public class ArticleServiceImpl implements ArticleService {
                      }
                  }
             }
+            articleObj.put("totalNum", articles.getTotal()); //总记录数目
+            articleObj.put("pages", articles.getPages()); //总页数
+            articleObj.put("pageNum", articles.getPageNum()); //当前页
+            articleObj.put("pagesSize", articles.getSize()); //每页的数量
             articleObj.put("data", datafilter.Articlefilter(articleResult));
             DataMap objectDataMap = DataMap.success().setData(articleObj);
             return objectDataMap;
@@ -191,8 +191,6 @@ public class ArticleServiceImpl implements ArticleService {
             PageHelper.clearPage();
         }
 
-
-
     }
 
     @Override
@@ -201,6 +199,7 @@ public class ArticleServiceImpl implements ArticleService {
             JSONObject articleObj = new JSONObject();
             int bNum = blogMapper.selectBlogNum();
             articleObj.put("name","article");
+            articleObj.put("title","文章");
             articleObj.put("Num",bNum);
             return articleObj;
         }
@@ -223,6 +222,34 @@ public class ArticleServiceImpl implements ArticleService {
             DataMap canlderFail = DataMap.fail(CodeType.UN_EXPECTED_ERROR);
             return canlderFail;
         }
+    }
+
+    @Override
+    public DataMap articlePostShow(int pageSize, int PageNum) {
+        JSONObject articleObj = new JSONObject();
+        try{
+            PageHelper.startPage(PageNum, pageSize);
+            List<Map<String, Object>> articlePostShow = blogMapper.getArticlePostShow();
+            PageInfo<Map<String, Object>> articles = new PageInfo<>(articlePostShow);
+            articleObj.put("totalNum", articles.getTotal()); //总记录数目
+            articleObj.put("pages", articles.getPages()); //总页数
+            articleObj.put("pageNum", articles.getPageNum()); //当前页
+            articleObj.put("pagesSize", articles.getSize()); //每页的数量
+            articleObj.put("data", datafilter.Articlefilter(articlePostShow));
+            DataMap objectDataMap = DataMap.success().setData(articleObj);
+            return  objectDataMap;
+        }
+        catch (Exception e)
+        {
+            System.out.println(e+"articlePostShow");
+            DataMap searchfail = DataMap.fail(CodeType.UN_EXPECTED_ERROR);
+            return searchfail;
+        }
+        finally {
+            PageHelper.clearPage();
+        }
+
+
     }
 
 

@@ -1,7 +1,10 @@
 package com.cyong.service;
 
 import com.alibaba.fastjson.JSONObject;
+import com.cyong.model.Link;
 import com.cyong.utils.DataMap;
+
+import java.util.List;
 
 /**
  * @BelongsProject: CyongBlogController
@@ -14,4 +17,8 @@ public interface LinkService {
     DataMap searchByLinkId(int LinkId);
 
     JSONObject getLinkCount();
+
+    DataMap linkVagueSearch(String linkKeyStr,int pageSize, int pageNum,String sorter,String filters);
+
+    DataMap addLink(String linkImage,String linkTitle,String linkDesc,String linkUrl,int linkType);
 }

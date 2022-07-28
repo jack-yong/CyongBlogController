@@ -2,6 +2,7 @@ package com.cyong.controller;
 
 
 
+import com.alibaba.fastjson.JSONObject;
 import com.cyong.constant.CodeType;
 import com.cyong.service.ArticleService;
 import com.cyong.utils.DataMap;
@@ -24,11 +25,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @Slf4j
+@RequestMapping("/article")
 public class ArticleController {
     @Autowired
     private ArticleService articleService;
 
-    @RequestMapping("/article/add")
+    @RequestMapping("/add")
     @ResponseBody
     String articleAdd(@RequestParam(name ="title") String title,
                       @RequestParam(name ="content") String content,
@@ -49,7 +51,7 @@ public class ArticleController {
         return JsonResult.fail(CodeType.SERVER_EXCEPTION).toJSON();
     }
 
-    @RequestMapping("/article/search")
+    @RequestMapping("/search")
     @ResponseBody
     String articleSearch(@RequestParam(name ="title",defaultValue = "") String title,
                          @RequestParam(name ="categoryid",defaultValue = "-1") int categoryId,
@@ -64,6 +66,24 @@ public class ArticleController {
             return JsonResult.build(dataMap).toJSON();
         }catch (Exception e){
             log.error("search article  happened exception", e);
+        }
+        return JsonResult.fail(CodeType.SERVER_EXCEPTION).toJSON();
+    }
+
+
+    @RequestMapping("/postshow")
+    @ResponseBody
+    String articlePostShow(@RequestParam(name ="pageSize",defaultValue = "10") int pageSize,
+                           @RequestParam(name ="page",defaultValue = "1") int pageNow)
+    {
+        try
+        {
+            DataMap dataMap = articleService.articlePostShow(pageSize, pageNow);
+            return JsonResult.build(dataMap).toJSON();
+        }
+        catch (Exception e)
+        {
+            log.error("func:articlePostShow happend an error",e);
         }
         return JsonResult.fail(CodeType.SERVER_EXCEPTION).toJSON();
     }

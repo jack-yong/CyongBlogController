@@ -1,7 +1,10 @@
 package com.cyong.dao;
 
+import com.cyong.model.DevLog;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 /**
  * @BelongsProject: CyongBlogController
@@ -15,4 +18,9 @@ import org.springframework.stereotype.Repository;
 public interface DevLogMapper {
 
     int selectDevLogNum();
+
+    int insertSelective(DevLog devLog);
+
+    List<DevLog> vagueSearchDL(String searchKey,String sortField,String sortOrder ,List<String> devLogKinds);
+
 }

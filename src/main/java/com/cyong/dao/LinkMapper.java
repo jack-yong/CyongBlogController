@@ -4,6 +4,8 @@ import com.cyong.model.Link;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Mapper
 @Repository
 public interface LinkMapper {
@@ -55,6 +57,7 @@ public interface LinkMapper {
      */
     int updateByPrimaryKey(Link record);
 
-
     int selectLinkNum();
+
+    List<Link> vagueSearchLink(String searchKey,String sortField,String sortOrder,List<String> linkKinds);
 }

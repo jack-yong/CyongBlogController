@@ -123,6 +123,7 @@ public class TagServiceImpl implements TagService {
             JSONObject tagObj = new JSONObject();
             int tagNum = tagMapper.selectTagNum();
             tagObj.put("name","tag");
+            tagObj.put("title","标签");
             tagObj.put("Num",tagNum);
             return tagObj;
         }

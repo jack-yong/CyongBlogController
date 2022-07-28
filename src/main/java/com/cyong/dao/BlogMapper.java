@@ -72,4 +72,6 @@ public interface BlogMapper {
     List<Map<String,Object>> articleVagueSearch(String title, int categoryId,String status, String commentStatus, String startDate, String endDate, String sortField, String sortOrder);
 
     List<Map<String,Object>> calendarArticle(String year);
+
+    List<Map<String,Object>> getArticlePostShow();
 }

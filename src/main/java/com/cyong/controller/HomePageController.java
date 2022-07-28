@@ -128,6 +128,28 @@ public class HomePageController {
         return JsonResult.fail(CodeType.SERVER_EXCEPTION).toJSON();
     }
 
+    @RequestMapping("/ACTdata")
+    @ResponseBody
+    public String homepageACTdata()
+    {
+        try {
+            JSONArray showArray= new JSONArray();
+            JSONObject articleNum = articleService.getArticleNum();
+            JSONObject categoryNum = categoryService.getCategoryNum();
+            JSONObject tagNums = tagService.getTagNums();
+            showArray.add(articleNum);
+            showArray.add(categoryNum);
+            showArray.add(tagNums);
+            DataMap showDataMap = DataMap.success().setData(showArray);
+            return JsonResult.build(showDataMap).toJSON();
+        }
+        catch (Exception e)
+        {
+            log.error("homepage get ACTdata happened expection",e);
+        }
+        return JsonResult.fail(CodeType.SERVER_EXCEPTION).toJSON();
+    }
+
 
 
 

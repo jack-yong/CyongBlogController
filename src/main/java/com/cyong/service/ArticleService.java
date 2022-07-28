@@ -23,6 +23,8 @@ public interface ArticleService {
 
     DataMap articleCanlder(String year);
 
+    DataMap articlePostShow(int pageSize,int PageNum);
+
 
 
 }

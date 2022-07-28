@@ -18,6 +18,7 @@
     <id column="tag_id" property="tagId" jdbcType="INTEGER" />
     <result column="tag_name" property="tagName" jdbcType="VARCHAR" />
     <result column="articleNum" property="articleNum" jdbcType="VARCHAR" />
+    <result column="tag_color" property="tagColor" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
     <!--
@@ -167,7 +168,7 @@
 
   <select id="tagFollowsArticle" resultMap="tagFollowArticleMap">
     select
-    tag_id, tag_name,
+    tag_id, tag_name,tag_color,
     count(btrelation_blog_id) as articleNum
     from  tb_tag t
     left outer join tb_blog_tag_relation trb on t.tag_id = trb.btrelation_tag_id

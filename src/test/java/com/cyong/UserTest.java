@@ -7,7 +7,9 @@ import com.cyong.dao.TagMapper;
 import com.cyong.model.Category;
 import com.cyong.model.User;
 import com.cyong.service.UserService;
+import com.cyong.utils.BuildArticleTabloid;
 import com.cyong.utils.DataMap;
+import com.cyong.utils.Datafilter;
 import org.junit.FixMethodOrder;
 import org.junit.jupiter.api.Test;
 import org.junit.runners.MethodSorters;
@@ -50,6 +52,9 @@ public class UserTest {
     @Resource
     private CategoryMapper categoryMapper;
 
+    @Resource
+    private BuildArticleTabloid buildArticleTabloid;
+
     @Test
     public void test0() throws SQLException
     {
@@ -71,7 +76,7 @@ public class UserTest {
 
     @Test
     public void test3(){
-        List<Map<String, Object>> maps = blogMapper.articleVagueSearch("", -1,  null, null, null, null, null, null);
+        List<Map<String, Object>> maps = blogMapper.articleVagueSearch("", 3,  null, null, null, null, null, null);
 
         System.out.println(maps);
     }
@@ -104,5 +109,21 @@ public class UserTest {
     public void test8(){
         List<Map<String, Object>> calendarMaps = blogMapper.calendarArticle("2022");
         System.out.println(calendarMaps+"calendarArticlecalendarArticle");
+    }
+
+    @Test
+    public void test9()
+    {
+        List<Map<String, Object>> articlePostShow = blogMapper.getArticlePostShow();
+        System.out.println(articlePostShow);
+    }
+
+    @Test
+    public void test10()
+    {
+        String str = "'# 一级标题\\r\\n## 二级标题\\r\\n##### 五级标题\\r\\n- 列表第一项\\r\\n- 列表第二项\\r\\n1. 有序列表第一项\\r\\n2. 有序列表第\n" +
+                "二项\\r\\n[标题](链接地址)\\r\\n![图片描述](图片链接地址)\\r\\n*斜体*\\r\\n**粗体**\\r\\n> 引用段落\\r\\n```\\r\\n代码块\\r\\n```'";
+        String deCode = buildArticleTabloid.buildArticleTabloid(str);
+        System.out.println(deCode);
     }
 }

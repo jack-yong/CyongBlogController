@@ -4,6 +4,8 @@ import com.cyong.model.DailySpeech;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Mapper
 @Repository
 public interface DailySpeechMapper {
@@ -64,4 +66,9 @@ public interface DailySpeechMapper {
     int updateByPrimaryKey(DailySpeech record);
 
     int selectDailySpeechNum();
+
+
+    List<DailySpeech> vagueSearchDS(String dsKey,String sortField,String sortOrder );
+
+
 }
