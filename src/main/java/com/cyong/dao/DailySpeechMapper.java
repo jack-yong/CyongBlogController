@@ -70,5 +70,7 @@ public interface DailySpeechMapper {
 
     List<DailySpeech> vagueSearchDS(String dsKey,String sortField,String sortOrder );
 
+    List<DailySpeech> searchAllDS();
+
 
 }

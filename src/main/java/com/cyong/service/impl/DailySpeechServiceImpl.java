@@ -27,7 +27,7 @@ import java.util.List;
  */
 @Service
 @Slf4j
-public class DailySpeechServiceImpl implements DailySpeechService {
+public class DailySpeechServiceImpl implements DailySpeechService{
     @Autowired
     private DailySpeechMapper dailySpeechMapper;
 
@@ -111,6 +111,12 @@ public class DailySpeechServiceImpl implements DailySpeechService {
         }
 
 
+    }
+
+    @Override
+    public DataMap getAllDailySpeech() {
+        List<DailySpeech> dailySpeeches = dailySpeechMapper.searchAllDS();
+        return DataMap.success().setData(datafilter.Pushpinsfilter(dailySpeeches) );
     }
 
 

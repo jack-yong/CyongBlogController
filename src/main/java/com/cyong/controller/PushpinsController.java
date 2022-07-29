@@ -63,5 +63,19 @@ public class PushpinsController {
         return JsonResult.fail(CodeType.SERVER_EXCEPTION).toJSON();
     }
 
+    @RequestMapping("/all")
+    @ResponseBody
+    public String pushpinsAll()
+    {
+        try{
+            DataMap allDailySpeech = dailySpeechService.getAllDailySpeech();
+            return JsonResult.build(allDailySpeech).toJSON();
+        }
+        catch (Exception e)
+        {
+            log.error("get all pushpins error",e);
+        }
+        return JsonResult.fail(CodeType.SERVER_EXCEPTION).toJSON();
+    }
 
 }

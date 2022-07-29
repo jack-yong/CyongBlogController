@@ -18,4 +18,6 @@ public interface DailySpeechService {
     DataMap vagueSearchByDSContent(String dsContent,int pageNum,int pageSize,String sorter);
 
     DataMap dsAdd(String dsContent,String dsImage);
+
+    DataMap getAllDailySpeech();
 }

@@ -9,3 +9,9 @@
 2022-07-28 20:19:45,459 [main] ERROR [com.alibaba.druid.filter.FilterManager] - load filter error, filter not found : spring-boot-starter-log4j2
 2022-07-28 20:20:57,121 [main] ERROR [com.alibaba.druid.filter.FilterManager] - load filter error, filter not found : spring-boot-starter-log4j2
 2022-07-28 21:35:21,471 [main] ERROR [com.alibaba.druid.filter.FilterManager] - load filter error, filter not found : spring-boot-starter-log4j2
+2022-07-29 15:13:55,329 [main] ERROR [com.alibaba.druid.filter.FilterManager] - load filter error, filter not found : spring-boot-starter-log4j2
+2022-07-29 15:31:32,251 [main] ERROR [com.alibaba.druid.filter.FilterManager] - load filter error, filter not found : spring-boot-starter-log4j2
+2022-07-29 15:36:16,938 [main] ERROR [com.alibaba.druid.filter.FilterManager] - load filter error, filter not found : spring-boot-starter-log4j2
+2022-07-29 15:48:38,262 [main] ERROR [com.alibaba.druid.filter.FilterManager] - load filter error, filter not found : spring-boot-starter-log4j2
+2022-07-29 16:55:56,269 [main] ERROR [com.alibaba.druid.filter.FilterManager] - load filter error, filter not found : spring-boot-starter-log4j2
+2022-07-29 19:19:22,700 [main] ERROR [com.alibaba.druid.filter.FilterManager] - load filter error, filter not found : spring-boot-starter-log4j2
