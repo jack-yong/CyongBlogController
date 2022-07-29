@@ -150,9 +150,9 @@ public class ArticleServiceImpl implements ArticleService {
             endDate = timeList[1];
         }
         try {
-            PageHelper.startPage(pageNum, pageSize);
+//            PageHelper.startPage(pageNum, pageSize);
             List<Map<String, Object>> articleResult = blogMapper.articleVagueSearch(title, category, statusValue, commentStatusValue, startDate, endDate, sortField, sortOrder);
-            PageInfo<Map<String, Object>> articles = new PageInfo<>(articleResult);
+//            PageInfo<Map<String, Object>> articles = new PageInfo<>(articleResult);
             Iterator<Map<String, Object>> iterator = articleResult.iterator();
             if(!tagList.equals("")){
                  while (iterator.hasNext()){
@@ -173,11 +173,27 @@ public class ArticleServiceImpl implements ArticleService {
                      }
                  }
             }
-            articleObj.put("totalNum", articles.getTotal()); //总记录数目
-            articleObj.put("pages", articles.getPages()); //总页数
-            articleObj.put("pageNum", articles.getPageNum()); //当前页
-            articleObj.put("pagesSize", articles.getSize()); //每页的数量
-            articleObj.put("data", datafilter.Articlefilter(articleResult));
+
+            int totalNum = articleResult.size();
+            int pages = (totalNum/pageSize)+1;
+            articleObj.put("totalNum", totalNum); //总记录数目
+            articleObj.put("pages", pages); //总页数
+            articleObj.put("pageNum", pageNum); //当前页
+            articleObj.put("pagesSize", pageSize); //每页的数量
+            if(articleResult!=null && articleResult.size()>0)
+            {
+                int startIndex = (pageNum-1)*pageSize;
+                int endIndex = pageNum*pageSize;
+                if(endIndex>totalNum)
+                {
+                    endIndex = totalNum;
+                }
+                List<Map<String, Object>> pageList = articleResult.subList(startIndex, endIndex);
+                articleObj.put("data", datafilter.Articlefilter(pageList));
+            }
+            else{
+                articleObj.put("data", datafilter.Articlefilter(articleResult));
+            }
             DataMap objectDataMap = DataMap.success().setData(articleObj);
             return objectDataMap;
         }
