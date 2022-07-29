@@ -126,4 +126,5 @@ public class UserTest {
         String deCode = buildArticleTabloid.buildArticleTabloid(str);
         System.out.println(deCode);
     }
+
 }
