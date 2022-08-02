@@ -92,4 +92,10 @@
             </if>
         </if>
     </select>
+
+    <select id="getAllDL" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from tb_devlog
+    </select>
 </mapper>

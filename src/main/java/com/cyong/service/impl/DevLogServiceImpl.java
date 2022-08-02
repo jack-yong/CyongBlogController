@@ -131,5 +131,11 @@ public class DevLogServiceImpl  implements DevLogService {
        }
     }
 
+    @Override
+    public DataMap getAllDevlog() {
+        List<DevLog> allDL = devLogMapper.getAllDL();
+        return DataMap.success().setData(datafilter.DevlogFilter(allDL));
+    }
+
 
 }

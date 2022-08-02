@@ -66,4 +66,19 @@ public class DevlogController {
 
         }
     }
+
+    @RequestMapping("/all")
+    @ResponseBody
+    public String devLogAll()
+    {
+        try{
+            DataMap allDevlog = devLogService.getAllDevlog();
+            return JsonResult.build(allDevlog).toJSON();
+        }
+        catch (Exception e)
+        {
+            log.error("get all devLog error",e);
+            return JsonResult.fail(CodeType.SERVER_EXCEPTION).toJSON();
+        }
+    }
 }

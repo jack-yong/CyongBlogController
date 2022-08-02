@@ -23,4 +23,6 @@ public interface DevLogMapper {
 
     List<DevLog> vagueSearchDL(String searchKey,String sortField,String sortOrder ,List<String> devLogKinds);
 
+    List<DevLog> getAllDL();
+
 }
