@@ -74,4 +74,9 @@ public interface BlogMapper {
     List<Map<String,Object>> calendarArticle(String year);
 
     List<Map<String,Object>> getArticlePostShow();
+
+
+    Map<String,Object> getArticleByAid(Long blogId);
+
+
 }

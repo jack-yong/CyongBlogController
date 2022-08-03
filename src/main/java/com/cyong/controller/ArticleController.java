@@ -88,5 +88,20 @@ public class ArticleController {
         return JsonResult.fail(CodeType.SERVER_EXCEPTION).toJSON();
     }
 
+    @RequestMapping("/detail")
+    @ResponseBody
+    String articleDetail(@RequestParam(name = "articleid") int articleid)
+    {
+        try{
+            DataMap articleDetail = articleService.getArticleDetail(articleid);
+            return JsonResult.build(articleDetail).toJSON();
+        }
+        catch (Exception e)
+        {
+            log.error("get article detail hanppend error:",e);
+            return JsonResult.fail(CodeType.SERVER_EXCEPTION).toJSON();
+        }
+    }
+
 
 }

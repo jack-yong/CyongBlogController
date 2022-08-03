@@ -184,4 +184,11 @@
     select  count(1)
     from tb_comment
   </select>
+
+  <select id="selectCommentByBlogId" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from tb_comment
+    where comment_blog_id = #{blogId,jdbcType=BIGINT}
+  </select>
 </mapper>

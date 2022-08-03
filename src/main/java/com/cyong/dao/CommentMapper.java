@@ -59,4 +59,6 @@ public interface CommentMapper {
     int updateByPrimaryKey(Comment record);
 
     int selectCommentNum();
+
+    List<Comment> selectCommentByBlogId(Long blogId);
 }

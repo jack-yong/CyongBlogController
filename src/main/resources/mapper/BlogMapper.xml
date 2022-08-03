@@ -42,6 +42,10 @@
     <result property="blogContent" column="blog_content"/>
   </resultMap>
 
+  <resultMap id="BlogDetailWithComment" type="java.util.Map" extends="BlogDetailWithContent">
+    <collection property="blogCommentList" ofType="com.cyong.model.Comment" javaType="list" column="blogId=blog_id" select="com.cyong.dao.CommentMapper.selectCommentByBlogId"/>
+  </resultMap>
+
   <resultMap id="TagsMap" type="com.cyong.model.Tag" >
     <!--
       WARNING - @mbggenerated
@@ -394,5 +398,17 @@
     from tb_blog b
     left outer join tb_category c on b.blog_category_id = c.category_id
     order by blog_update_time DESC
+  </select>
+
+  <select id="getArticleByAid" resultMap="BlogDetailWithComment" >
+    select
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    ,
+    <include refid="selectCategory"/>
+    from tb_blog b
+    left outer join tb_category c on b.blog_category_id = c.category_id
+    where blog_id = #{blogId,jdbcType=BIGINT}
   </select>
 </mapper>

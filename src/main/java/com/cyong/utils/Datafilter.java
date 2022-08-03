@@ -115,6 +115,53 @@ public class Datafilter {
         return articleList;
     }
 
+    public JSONObject ArticleDetailfilter( Map<String, Object> ArticleDetail){
+//        JSONArray articleList = new JSONArray();
+//        for(Map<String, Object> item:Articles){
+            JSONObject itemobject = new JSONObject();
+            try{
+                if(ArticleDetail.containsKey("blogSubUrl"))
+                {
+                    itemobject.put("suburl",ArticleDetail.get("blogSubUrl"));
+                }
+                if(ArticleDetail.containsKey("blogStatus"))
+                {
+                    itemobject.put("status",ArticleDetail.get("blogStatus"));
+                }
+                if(ArticleDetail.containsKey("blogContent"))
+                {
+                    itemobject.put("blogContent",ArticleDetail.get("blogContent"));
+                }
+                if(ArticleDetail.containsKey("blogUpdateTime"))
+                {
+                    itemobject.put("updatetime",timeUtil.getParseDateForSix((Date) ArticleDetail.get("blogUpdateTime")));
+                }
+                if(ArticleDetail.containsKey("blogCommentList"))
+                {
+                    itemobject.put("blogCommentList",ArticleDetail.get("blogCommentList"));
+                }
+
+                itemobject.put("id",ArticleDetail.get("blogId"));
+                itemobject.put("title",ArticleDetail.get("blogTitle"));
+                itemobject.put("coverimage",ArticleDetail.get("blogCoverImage"));
+                itemobject.put("category",ArticleDetail.get("category"));
+                itemobject.put("tags",ArticleDetail.get("blogTagsList"));
+                itemobject.put("views",ArticleDetail.get("blogViews"));
+                itemobject.put("likes",ArticleDetail.get("blogLikes"));
+                itemobject.put("enablecomment",ArticleDetail.get("blogEnableComment"));
+                itemobject.put("createtime",timeUtil.getParseDateForSix((Date) ArticleDetail.get("blogCreateTime")));
+
+                return itemobject;
+//                articleList.add(itemobject);
+            }catch (Exception e){
+                System.out.println("Articlefilter"+e);
+                return itemobject;
+            }
+
+//        }
+
+    }
+
     public JSONArray Pushpinsfilter(List<DailySpeech> dailySpeeches)
     {
         try

@@ -173,7 +173,6 @@ public class ArticleServiceImpl implements ArticleService {
                      }
                  }
             }
-
             int totalNum = articleResult.size();
             int pages = (totalNum/pageSize)+1;
             articleObj.put("totalNum", totalNum); //总记录数目
@@ -206,7 +205,6 @@ public class ArticleServiceImpl implements ArticleService {
         finally {
             PageHelper.clearPage();
         }
-
     }
 
     @Override
@@ -266,6 +264,13 @@ public class ArticleServiceImpl implements ArticleService {
         }
 
 
+    }
+
+    @Override
+    public DataMap getArticleDetail(int aid) {
+        Map<String, Object> articleByAid = blogMapper.getArticleByAid((long) aid);
+        DataMap objectDataMap = DataMap.success().setData(datafilter.ArticleDetailfilter(articleByAid));
+        return objectDataMap;
     }
 
 

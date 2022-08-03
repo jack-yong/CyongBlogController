@@ -25,6 +25,8 @@ public interface ArticleService {
 
     DataMap articlePostShow(int pageSize,int PageNum);
 
+    DataMap getArticleDetail(int aid);
+
 
 
 }
