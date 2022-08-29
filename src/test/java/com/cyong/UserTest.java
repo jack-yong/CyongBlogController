@@ -6,6 +6,7 @@ import com.cyong.dao.CategoryMapper;
 import com.cyong.dao.TagMapper;
 import com.cyong.model.Category;
 import com.cyong.model.User;
+import com.cyong.service.PortfolioService;
 import com.cyong.service.UserService;
 import com.cyong.utils.BuildArticleTabloid;
 import com.cyong.utils.DataMap;
@@ -54,6 +55,10 @@ public class UserTest {
 
     @Resource
     private BuildArticleTabloid buildArticleTabloid;
+
+
+    @Resource
+    private PortfolioService portfolioService;
 
     @Test
     public void test0() throws SQLException
@@ -125,6 +130,14 @@ public class UserTest {
                 "二项\\r\\n[标题](链接地址)\\r\\n![图片描述](图片链接地址)\\r\\n*斜体*\\r\\n**粗体**\\r\\n> 引用段落\\r\\n```\\r\\n代码块\\r\\n```'";
         String deCode = buildArticleTabloid.buildArticleTabloid(str);
         System.out.println(deCode);
+    }
+
+
+    @Test
+    public void test11()
+    {
+        DataMap dataMap = portfolioService.searchAllPortfolio();
+        System.out.println(dataMap);
     }
 
 }

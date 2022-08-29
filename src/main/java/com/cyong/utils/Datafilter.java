@@ -229,4 +229,21 @@ public class Datafilter {
             return new JSONArray();
         }
     }
+
+
+    public JSONArray PortfolioFilter(List<Portfolio> portfolioList)
+    {
+        JSONArray   PortArr = new JSONArray();
+        for (Portfolio item : portfolioList) {
+            JSONObject itemObj = new JSONObject();
+            itemObj.put("id",item.getPortfolioID());
+            itemObj.put("portfoliotitle",item.getPortfolioTitle());
+            itemObj.put("portfolioContent",item.getPortfolioDescribe());
+            itemObj.put("portfolioimage",item.getPortfolioImgUrl());
+            itemObj.put("portfoliourl",item.getPortfolioUrl());
+            itemObj.put("portfolioCreateDate",timeUtil.getParseDateForSix(item.getPortfolioDate()));
+            PortArr.add(itemObj);
+        }
+        return PortArr;
+    }
 }

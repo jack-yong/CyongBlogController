@@ -15,4 +15,7 @@ public interface PortfolioService {
 
     JSONObject getPortfolioCount();
 
+    DataMap searchAllPortfolio();
+
+    DataMap addPortfolio(String portfoliotitle,String portfolioContent,String portfolioimage,String portfoliourl);
 }

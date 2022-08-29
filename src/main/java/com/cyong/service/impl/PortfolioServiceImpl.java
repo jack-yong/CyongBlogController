@@ -2,10 +2,15 @@ package com.cyong.service.impl;
 
 import com.alibaba.fastjson.JSONObject;
 import com.cyong.dao.PortfolioMapper;
+import com.cyong.model.Portfolio;
 import com.cyong.service.PortfolioService;
 import com.cyong.utils.DataMap;
+import com.cyong.utils.Datafilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.Date;
+import java.util.List;
 
 /**
  * @BelongsProject: CyongBlogController
@@ -18,6 +23,10 @@ import org.springframework.stereotype.Service;
 public class PortfolioServiceImpl implements PortfolioService {
     @Autowired
     private PortfolioMapper portfolioMapper;
+
+    @Autowired
+    private Datafilter datafilter;
+
 
     @Override
     public DataMap searchByPortfolioId(int PortfolioId) {
@@ -37,7 +46,25 @@ public class PortfolioServiceImpl implements PortfolioService {
             System.out.println(e+"getPortfolioCount");
             return null;
         }
+    }
 
+    @Override
+    public DataMap searchAllPortfolio() {
+        List<Portfolio> allPortfolios = portfolioMapper.getAllPortfolios();
+        return  DataMap.success().setData(datafilter.PortfolioFilter(allPortfolios));
+    }
+
+    @Override
+    public DataMap addPortfolio(String portfoliotitle, String portfolioContent, String portfolioimage, String portfoliourl) {
+        Date createTime = new Date();
+        Portfolio portfolio = new Portfolio();
+        portfolio.setPortfolioDate(createTime);
+        portfolio.setPortfolioTitle(portfoliotitle);
+        portfolio.setPortfolioImgUrl(portfolioimage);
+        portfolio.setPortfolioDescribe(portfolioContent);
+        portfolio.setPortfolioUrl(portfoliourl);
+        portfolioMapper.insert(portfolio);
+        return DataMap.success();
     }
 
 }

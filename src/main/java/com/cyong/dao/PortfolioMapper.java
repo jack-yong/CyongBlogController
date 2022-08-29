@@ -1,7 +1,12 @@
 package com.cyong.dao;
 
+import com.cyong.model.Link;
+import com.cyong.model.Portfolio;
+import com.cyong.model.Tag;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 /**
  * @BelongsProject: CyongBlogController
@@ -14,4 +19,9 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface PortfolioMapper {
     int selectPortfolioNum();
+
+    List<Portfolio>  getAllPortfolios();
+
+    int insert(Portfolio record);
+
 }

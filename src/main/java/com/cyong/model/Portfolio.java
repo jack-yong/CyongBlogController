@@ -13,9 +13,10 @@ import java.util.Date;
  */
 @Data
 public class Portfolio {
-    private Integer PortfolioID;
-    private String PortfolioTitle;
-    private  String PortfolioDescribe;
-    private  String PortfolioImgUrl;
-    private Date  PortfolioDate;
+    private Integer portfolioID;
+    private String portfolioTitle;
+    private  String portfolioDescribe;
+    private  String portfolioImgUrl;
+    private Date  portfolioDate;
+    private String portfolioUrl;
 }

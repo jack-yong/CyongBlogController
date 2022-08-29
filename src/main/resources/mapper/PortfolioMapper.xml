@@ -1,8 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.cyong.dao.PortfolioMapper" >
+    <resultMap id="BaseResultMap" type="com.cyong.model.Portfolio" >
+
+        <id column="portfolio_id" property="portfolioID" jdbcType="INTEGER" />
+        <result column="portfolio_describe" property="portfolioDescribe" jdbcType="VARCHAR" />
+        <result column="portfolio_title" property="portfolioTitle" jdbcType="VARCHAR" />
+        <result column="portfolio_imgurl" property="portfolioImgUrl" jdbcType="VARCHAR" />
+        <result column="portfolio_url" property="portfolioUrl" jdbcType="VARCHAR" />
+        <result column="portfolio_date" property="portfolioDate" jdbcType="TIMESTAMP" />
+    </resultMap>
+
+
     <select id="selectPortfolioNum" resultType="int">
         select count(1)
         from tb_portfolio
     </select>
+
+
+    <select id="getAllPortfolios" resultMap="BaseResultMap">
+        select *
+        from tb_portfolio
+    </select>
+
+    <insert id="insert" parameterType="com.cyong.model.Portfolio">
+        insert into tb_portfolio (portfolio_id,portfolio_title,portfolio_describe,portfolio_imgurl,portfolio_date,portfolio_url)
+        values  (#{portfolioID,jdbcType=INTEGER},#{portfolioTitle,jdbcType=VARCHAR},#{portfolioDescribe,jdbcType=VARCHAR},
+        #{portfolioImgUrl,jdbcType=VARCHAR},#{portfolioDate,jdbcType=TIMESTAMP},#{portfolioUrl,jdbcType=VARCHAR})
+    </insert>
 </mapper>

@@ -27,6 +27,4 @@ public interface ArticleService {
 
     DataMap getArticleDetail(int aid);
 
-
-
 }

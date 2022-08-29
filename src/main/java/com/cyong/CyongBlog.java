@@ -16,7 +16,6 @@ public class CyongBlog {
         DruidDataSource dataSource = new DruidDataSource();
         return dataSource;
     }
-
     public static void main(String[] args) {
         SpringApplication.run(CyongBlog.class, args);
     }
