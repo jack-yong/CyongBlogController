@@ -60,4 +60,6 @@ public interface LinkMapper {
     int selectLinkNum();
 
     List<Link> vagueSearchLink(String searchKey,String sortField,String sortOrder,List<String> linkKinds);
+
+
 }

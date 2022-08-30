@@ -137,5 +137,12 @@ public class LinkServiceImpl implements LinkService {
 
     }
 
+    @Override
+    public DataMap linkSearchAll() {
+        List<Link> links = linkMapper.vagueSearchLink("", "", "", null);
+        DataMap objectDataMap = DataMap.success().setData(datafilter.LinkFilter(links));
+        return objectDataMap;
+    }
+
 
 }

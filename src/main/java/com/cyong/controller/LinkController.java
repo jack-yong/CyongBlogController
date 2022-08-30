@@ -66,4 +66,19 @@ public class LinkController {
         }
     }
 
+    @RequestMapping("/all")
+    @ResponseBody
+    public String linkAll()
+    {
+        try{
+            DataMap dataMap = linkService.linkSearchAll();
+            return JsonResult.build(dataMap).toJSON();
+        }
+        catch (Exception e)
+        {
+            log.error("Controller: linkSearch","func:linkSearch",e);
+            return JsonResult.fail(CodeType.SERVER_EXCEPTION).toJSON();
+        }
+    }
+
 }

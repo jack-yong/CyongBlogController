@@ -21,4 +21,6 @@ public interface LinkService {
     DataMap linkVagueSearch(String linkKeyStr,int pageSize, int pageNum,String sorter,String filters);
 
     DataMap addLink(String linkImage,String linkTitle,String linkDesc,String linkUrl,int linkType);
+
+    DataMap linkSearchAll();
 }

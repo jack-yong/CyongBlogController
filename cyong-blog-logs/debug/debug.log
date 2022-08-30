@@ -1375,3 +1375,260 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'portfolio_
 2022-08-29 15:54:12,152 [http-nio-8888-exec-2] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 157261
 2022-08-29 15:54:12,158 [http-nio-8888-exec-10] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 156956
 2022-08-29 15:54:12,164 [http-nio-8888-exec-8] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 88354
+2022-08-30 09:14:41,406 [main] INFO  [com.cyong.CyongBlog] - Starting CyongBlog using Java 1.8.0_281 on DESKTOP-0DKFFPP with PID 19400 (E:\LabProject\CyongBlog\controller\target\classes started by 18074 in E:\LabProject\CyongBlog\controller)
+2022-08-30 09:14:41,424 [main] INFO  [com.cyong.CyongBlog] - No active profile set, falling back to default profiles: default
+2022-08-30 09:14:43,385 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-30 09:14:43,390 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-08-30 09:14:43,445 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 25 ms. Found 0 Redis repository interfaces.
+2022-08-30 09:14:44,470 [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8888 (http)
+2022-08-30 09:14:44,485 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8888"]
+2022-08-30 09:14:44,486 [main] INFO  [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2022-08-30 09:14:44,486 [main] INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2022-08-30 09:14:44,686 [main] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2022-08-30 09:14:44,687 [main] INFO  [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 3057 ms
+2022-08-30 09:14:45,297 [main] ERROR [com.alibaba.druid.filter.FilterManager] - load filter error, filter not found : spring-boot-starter-log4j2
+2022-08-30 09:14:47,521 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8888"]
+2022-08-30 09:14:47,547 [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat started on port(s): 8888 (http) with context path ''
+2022-08-30 09:14:47,562 [main] INFO  [com.cyong.CyongBlog] - Started CyongBlog in 7.253 seconds (JVM running for 11.676)
+2022-08-30 09:14:59,804 [http-nio-8888-exec-2] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-30 09:14:59,805 [http-nio-8888-exec-2] INFO  [org.springframework.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2022-08-30 09:14:59,808 [http-nio-8888-exec-2] INFO  [org.springframework.web.servlet.DispatcherServlet] - Completed initialization in 3 ms
+2022-08-30 09:15:01,005 [http-nio-8888-exec-1] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} inited
+2022-08-30 09:16:35,657 [http-nio-8888-exec-1] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 80794
+2022-08-30 09:16:35,657 [http-nio-8888-exec-3] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 80800
+2022-08-30 09:16:35,658 [http-nio-8888-exec-3] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 94208
+2022-08-30 09:16:35,661 [http-nio-8888-exec-3] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 94714
+2022-08-30 09:18:32,042 [http-nio-8888-exec-6] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 65991
+2022-08-30 09:18:32,044 [http-nio-8888-exec-8] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 97028
+2022-08-30 09:23:05,458 [http-nio-8888-exec-1] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 225568
+2022-08-30 09:23:05,459 [http-nio-8888-exec-10] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 247406
+2022-08-30 09:28:44,541 [http-nio-8888-exec-2] ERROR [com.cyong.service.impl.LinkServiceImpl] - Service: LinkService
+java.lang.NullPointerException: null
+	at com.cyong.service.impl.LinkServiceImpl.linkVagueSearch(LinkServiceImpl.java:69) [classes/:?]
+	at com.cyong.controller.LinkController.linkSearch(LinkController.java:59) [classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_281]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_281]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_281]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_281]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) [spring-web-5.3.10.jar:5.3.10]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) [spring-web-5.3.10.jar:5.3.10]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) [spring-webmvc-5.3.10.jar:5.3.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) [spring-webmvc-5.3.10.jar:5.3.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) [spring-webmvc-5.3.10.jar:5.3.10]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) [spring-webmvc-5.3.10.jar:5.3.10]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) [spring-webmvc-5.3.10.jar:5.3.10]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) [spring-webmvc-5.3.10.jar:5.3.10]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.3.10.jar:5.3.10]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) [spring-webmvc-5.3.10.jar:5.3.10]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) [tomcat-embed-core-9.0.53.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.3.10.jar:5.3.10]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) [tomcat-embed-core-9.0.53.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.3.10.jar:5.3.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.3.10.jar:5.3.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.3.10.jar:5.3.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.3.10.jar:5.3.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.3.10.jar:5.3.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.3.10.jar:5.3.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_281]
+2022-08-30 09:28:53,789 [http-nio-8888-exec-9] ERROR [com.cyong.service.impl.LinkServiceImpl] - Service: LinkService
+java.lang.NullPointerException: null
+	at com.cyong.service.impl.LinkServiceImpl.linkVagueSearch(LinkServiceImpl.java:69) [classes/:?]
+	at com.cyong.controller.LinkController.linkSearch(LinkController.java:59) [classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_281]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_281]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_281]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_281]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) [spring-web-5.3.10.jar:5.3.10]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) [spring-web-5.3.10.jar:5.3.10]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) [spring-webmvc-5.3.10.jar:5.3.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) [spring-webmvc-5.3.10.jar:5.3.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) [spring-webmvc-5.3.10.jar:5.3.10]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) [spring-webmvc-5.3.10.jar:5.3.10]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) [spring-webmvc-5.3.10.jar:5.3.10]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) [spring-webmvc-5.3.10.jar:5.3.10]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.3.10.jar:5.3.10]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) [spring-webmvc-5.3.10.jar:5.3.10]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) [tomcat-embed-core-9.0.53.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.3.10.jar:5.3.10]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) [tomcat-embed-core-9.0.53.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.3.10.jar:5.3.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.3.10.jar:5.3.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.3.10.jar:5.3.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.3.10.jar:5.3.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.3.10.jar:5.3.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.3.10.jar:5.3.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_281]
+2022-08-30 09:28:53,804 [http-nio-8888-exec-7] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 348293
+2022-08-30 09:28:53,803 [http-nio-8888-exec-8] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 348300
+2022-08-30 09:29:32,761 [http-nio-8888-exec-3] ERROR [com.cyong.service.impl.LinkServiceImpl] - Service: LinkService
+java.lang.NullPointerException: null
+	at com.cyong.service.impl.LinkServiceImpl.linkVagueSearch(LinkServiceImpl.java:69) [classes/:?]
+	at com.cyong.controller.LinkController.linkSearch(LinkController.java:59) [classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_281]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_281]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_281]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_281]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) [spring-web-5.3.10.jar:5.3.10]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) [spring-web-5.3.10.jar:5.3.10]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) [spring-webmvc-5.3.10.jar:5.3.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) [spring-webmvc-5.3.10.jar:5.3.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) [spring-webmvc-5.3.10.jar:5.3.10]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) [spring-webmvc-5.3.10.jar:5.3.10]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) [spring-webmvc-5.3.10.jar:5.3.10]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) [spring-webmvc-5.3.10.jar:5.3.10]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.3.10.jar:5.3.10]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) [spring-webmvc-5.3.10.jar:5.3.10]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) [tomcat-embed-core-9.0.53.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.3.10.jar:5.3.10]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) [tomcat-embed-core-9.0.53.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.3.10.jar:5.3.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.3.10.jar:5.3.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.3.10.jar:5.3.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.3.10.jar:5.3.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.3.10.jar:5.3.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.3.10.jar:5.3.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.53.jar:9.0.53]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_281]
+2022-08-30 09:41:26,011 [main] INFO  [com.cyong.CyongBlog] - Starting CyongBlog using Java 1.8.0_281 on DESKTOP-0DKFFPP with PID 15580 (E:\LabProject\CyongBlog\controller\target\classes started by 18074 in E:\LabProject\CyongBlog\controller)
+2022-08-30 09:41:26,027 [main] INFO  [com.cyong.CyongBlog] - No active profile set, falling back to default profiles: default
+2022-08-30 09:41:26,992 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-30 09:41:26,998 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-08-30 09:41:27,029 [main] INFO  [org.springframework.data.repository.config.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
+2022-08-30 09:41:27,737 [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8888 (http)
+2022-08-30 09:41:27,737 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8888"]
+2022-08-30 09:41:27,737 [main] INFO  [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2022-08-30 09:41:27,737 [main] INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2022-08-30 09:41:27,888 [main] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2022-08-30 09:41:27,888 [main] INFO  [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 1761 ms
+2022-08-30 09:41:28,283 [main] ERROR [com.alibaba.druid.filter.FilterManager] - load filter error, filter not found : spring-boot-starter-log4j2
+2022-08-30 09:41:30,084 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8888"]
+2022-08-30 09:41:30,106 [main] INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat started on port(s): 8888 (http) with context path ''
+2022-08-30 09:41:30,122 [main] INFO  [com.cyong.CyongBlog] - Started CyongBlog in 5.105 seconds (JVM running for 8.57)
+2022-08-30 09:42:25,283 [http-nio-8888-exec-2] INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-30 09:42:25,283 [http-nio-8888-exec-2] INFO  [org.springframework.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2022-08-30 09:42:25,287 [http-nio-8888-exec-2] INFO  [org.springframework.web.servlet.DispatcherServlet] - Completed initialization in 4 ms
+2022-08-30 09:42:25,836 [http-nio-8888-exec-3] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} inited
+2022-08-30 09:43:42,150 [http-nio-8888-exec-1] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 71379
+2022-08-30 09:43:42,154 [http-nio-8888-exec-1] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 76036
+2022-08-30 09:43:42,165 [http-nio-8888-exec-1] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 76382
+2022-08-30 09:46:38,887 [http-nio-8888-exec-1] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 149291
+2022-08-30 09:46:38,888 [http-nio-8888-exec-1] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 171967
+2022-08-30 09:46:38,889 [http-nio-8888-exec-1] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 171982
+2022-08-30 09:46:38,892 [http-nio-8888-exec-1] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 253125
+2022-08-30 09:52:14,505 [http-nio-8888-exec-1] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 284147
+2022-08-30 09:52:14,508 [http-nio-8888-exec-1] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 299847
+2022-08-30 09:54:38,499 [http-nio-8888-exec-7] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 143981
+2022-08-30 10:08:30,507 [http-nio-8888-exec-3] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 831992
+2022-08-30 10:17:24,402 [http-nio-8888-exec-5] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 533876
+2022-08-30 10:20:50,344 [http-nio-8888-exec-2] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 205926
+2022-08-30 10:23:03,349 [http-nio-8888-exec-1] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 132989
+2022-08-30 10:33:19,246 [http-nio-8888-exec-5] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 556922
+2022-08-30 10:34:26,244 [http-nio-8888-exec-2] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 66963
+2022-08-30 10:36:23,207 [http-nio-8888-exec-3] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 89983
+2022-08-30 10:42:10,173 [http-nio-8888-exec-5] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 338780
+2022-08-30 10:42:10,173 [http-nio-8888-exec-5] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 346909
+2022-08-30 10:42:10,173 [http-nio-8888-exec-5] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 346900
+2022-08-30 10:43:56,157 [http-nio-8888-exec-2] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 105970
+2022-08-30 10:45:32,187 [http-nio-8888-exec-1] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 96013
+2022-08-30 10:51:31,804 [http-nio-8888-exec-8] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 76846
+2022-08-30 10:51:31,809 [http-nio-8888-exec-1] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 283789
+2022-08-30 10:53:47,120 [http-nio-8888-exec-10] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 60502
+2022-08-30 10:53:47,120 [http-nio-8888-exec-10] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 60509
+2022-08-30 10:53:47,120 [http-nio-8888-exec-10] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 114195
+2022-08-30 10:57:34,187 [http-nio-8888-exec-10] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 92715
+2022-08-30 10:57:34,189 [http-nio-8888-exec-10] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 135883
+2022-08-30 10:57:34,191 [http-nio-8888-exec-10] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 135884
+2022-08-30 10:58:48,579 [http-nio-8888-exec-6] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 74369
+2022-08-30 10:58:48,582 [http-nio-8888-exec-6] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 74364
+2022-08-30 11:00:19,998 [http-nio-8888-exec-1] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 91388
+2022-08-30 11:00:20,006 [http-nio-8888-exec-1] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 91410
+2022-08-30 11:04:13,090 [http-nio-8888-exec-6] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 188515
+2022-08-30 11:04:13,090 [http-nio-8888-exec-6] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 209597
+2022-08-30 11:04:13,090 [http-nio-8888-exec-6] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 233059
+2022-08-30 11:06:11,098 [http-nio-8888-exec-2] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 94080
+2022-08-30 11:12:12,680 [http-nio-8888-exec-8] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 239576
+2022-08-30 11:12:12,681 [http-nio-8888-exec-4] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 304024
+2022-08-30 11:13:31,546 [http-nio-8888-exec-5] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 78842
+2022-08-30 11:14:48,066 [http-nio-8888-exec-1] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 76515
+2022-08-30 11:14:48,070 [http-nio-8888-exec-1] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 76517
+2022-08-30 11:16:59,998 [http-nio-8888-exec-4] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 131909
+2022-08-30 11:17:00,000 [http-nio-8888-exec-2] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 131915
+2022-08-30 11:18:46,542 [http-nio-8888-exec-3] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 106520
+2022-08-30 11:18:46,545 [http-nio-8888-exec-3] WARN  [com.alibaba.druid.pool.DruidAbstractDataSource] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cyongblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8, version : 1.2.5, lastPacketReceivedIdleMillis : 106529
