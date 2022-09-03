@@ -34,7 +34,7 @@ public class LinkController {
                            @RequestParam(name = "linkurl" ) String linkUrl,
                            @RequestParam(name = "linkdesc" ) String linkDesc,
                            @RequestParam(name = "linktype") int linkType,
-                           @RequestParam(name = "linkImage",defaultValue = "") String linkImage)
+                           @RequestParam(name = "linkimg",defaultValue = "") String linkImage)
     {
         try{
             DataMap dataMap = linkService.addLink(linkImage, linkTitle, linkDesc, linkUrl, linkType);

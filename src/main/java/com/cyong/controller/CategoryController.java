@@ -58,8 +58,8 @@ public class CategoryController {
 
     @RequestMapping("/category/add")
     @ResponseBody
-    public String categoryAdd(@RequestParam(name ="cateName") String cateName,
-                              @RequestParam(name ="cateImgUrl",defaultValue = "") String cateImgUrl)
+    public String categoryAdd(@RequestParam(name ="catename") String cateName,
+                              @RequestParam(name ="cateimgurl",defaultValue = "") String cateImgUrl)
     {
         try{
             DataMap dataMap = categoryService.addCategory(cateName, "");

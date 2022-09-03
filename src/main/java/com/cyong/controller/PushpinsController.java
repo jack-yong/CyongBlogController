@@ -49,8 +49,8 @@ public class PushpinsController {
 
     @RequestMapping("/add")
     @ResponseBody
-    public String pushpinsAdd(@RequestParam(name = "pushpinsContent") String pushpinsContent,
-                              @RequestParam(name="pushpinsImage",defaultValue = "") String pushpinsImage)
+    public String pushpinsAdd(@RequestParam(name = "pushcontent") String pushpinsContent,
+                              @RequestParam(name="pushimg",defaultValue = "") String pushpinsImage)
     {
         try{
 

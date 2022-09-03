@@ -63,7 +63,7 @@ public class TagController {
 
     @RequestMapping("/tag/add")
     @ResponseBody
-    public String tagAdd(@RequestParam(name ="tagName") String tagName,
+    public String tagAdd(@RequestParam(name ="tagname") String tagName,
                          @RequestParam(name ="tagColor") String tagColor)
     {
         try{
